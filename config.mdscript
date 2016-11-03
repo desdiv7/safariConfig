@@ -1,0 +1,2980 @@
+#Auto-generated config at Sun Dec 29 23:57:23 EST 2013.
+#See the wiki at https://github.com/ModDamage/ModDamage/wiki for more information.
+
+
+Settings
+    ## Port probably has to be larger than 1024
+    ## Uncomment the following to enable the server     
+    ## bindaddr should be left empty if you want the server to be accessable from anywhere
+    server-bindaddr = 198.27.108.219
+    server port = 8912
+    server username = mda
+    server password = nug
+
+    debugging = quiet
+    disable death messages = no
+    disable join messages = no
+    disable quit messages = no
+    disable kick messages = no
+    #This interval should be tinkered with ONLY if you understand the implications.
+    tags save interval = 200
+
+    #Dark
+    #Dragon
+    #Ice
+    #Psychic
+    #Electric
+    #Grass
+    #Water
+    #Fire
+    #Steel
+    #Ghost
+    #Bug
+    #Ground
+    #Poison
+    #Flying
+    #Fighting
+    #Normal
+    #Fairy
+Aliases
+    Armor
+    Biome
+    Command
+    Enchantment
+    Item
+    Group
+    Material
+        axe
+            WOOD_AXE
+            STONE_AXE
+            IRON_AXE
+            GOLD_AXE
+            DIAMOND_AXE
+        hoe
+            WOOD_HOE
+            STONE_HOE
+            IRON_HOE
+            GOLD_HOE
+            DIAMOND_HOE
+        pickaxe
+            WOOD_PICKAXE
+            STONE_PICKAXE
+            IRON_PICKAXE
+            GOLD_PICKAXE
+            DIAMOND_PICKAXE
+        spade
+            WOOD_SPADE
+            STONE_SPADE
+            IRON_SPADE
+            GOLD_SPADE
+            DIAMOND_SPADE
+        sword
+            WOOD_SWORD
+            STONE_SWORD
+            IRON_SWORD
+            GOLD_SWORD
+            DIAMOND_SWORD
+    Message
+    Region
+    Routine
+    Type
+    TypeName
+    World
+# Events
+## Item Events
+on DropItem
+on PickupItem
+on ItemHeld
+on Enchant
+on PrepareEnchant
+
+## Misc Events
+on Init
+    if world_name == "world"
+      #Dark
+        set.world_tag_suckerpunchmax: 10
+        set.world_tag_nightslashppmax: 10
+        set.world_tag_thiefppmax: 10
+        set.world_tag_paybackppmax: 10
+      #Dragon
+        set.world_tag_outrageppmax: 10
+        set.world_tag_dragonrushppmax: 10
+        set.world_tag_dragonrageppmax: 10
+        set.world_tag_dualchopppmax: 10
+        set.world_tag_roaroftimeppmax: 10
+      #Ice
+        set.world_tag_powdersnowppmax: 10
+        set.world_tag_blizzardppmax: 10
+        set.world_tag_icebeamppmax: 10
+        set.world_tag_sheercoldppmax: 5
+      #Psychic
+        set.world_tag_gravityppmax: 15
+        set.world_tag_confusionppmax: 20
+        set.world_tag_psywaveppmax: 15
+        set.world_tag_futuresightppmax: 10
+        set.world_tag_psychicppmax: 15
+        set.world_tag_teleportppmax: 10
+        set.world_tag_agilityppmax: 15
+        set.world_tag_roleplayppmax: 10
+      #Electric
+        set.world_tag_thunderboltppmax: 10
+        set.world_tag_thunderppmax: 10
+        set.world_tag_thunderwaveppmax: 10
+        set.world_tag_electrowebppmax: 10
+        set.world_tag_thundershockppmax: 10
+        set.world_tag_volttackleppmax: 10
+        set.world_tag_wildchargeppmax: 10
+      #Grass
+        set.world_tag_petaldanceppmax: 15
+        set.world_tag_absorbppmax: 10
+        set.world_tag_woodhammerppmax: 10
+        set.world_tag_megadrainppmax: 10
+        set.world_tag_gigadrainppmax: 10
+        set.world_tag_stunsporeppmax: 10
+      #Water
+        set.world_tag_aquajetppmax: 10
+        set.world_tag_aquaringppmax: 10
+        set.world_tag_raindanceppmax: 15
+        set.world_tag_hydrocannonppmax: 10
+        set.world_tag_waterfallppmax: 10
+        set.world_tag_muddywaterppmax: 10
+      #Fire
+        set.world_tag_flareblitzppmax: 15
+        set.world_tag_flameburstppmax: 20
+        set.world_tag_willowispppmax: 15
+        set.world_tag_flamechargeppmax: 10
+        set.world_tag_flamethrowerppmax: 10
+        set.world_tag_sunnydayppmax: 15
+      #Steel
+        set.world_tag_bulletpunchppmax: 10
+        set.world_tag_doomdesireppmax: 10
+        set.world_tag_meteormashppmax: 10
+        set.world_tag_shiftgearppmax: 10
+      #Ghost
+        set.world_tag_confuserayppmax: 10
+        set.world_tag_shadowclawppmax: 20
+        set.world_tag_nightshadeppmax: 15
+        set.world_tag_destinybondppmax: 10
+        set.world_tag_shadowpunchppmax: 15
+        set.world_tag_perishsongppmax: 5
+      #Bug
+        set.world_tag_leechlifeppmax: 10
+        set.world_tag_stringshotppmax: 10
+        set.world_tag_healorderppmax: 10
+        set.world_tag_attackorderppmax: 10
+        set.world_tag_defendorderppmax: 10
+        set.world_tag_twineedleppmax: 10
+        set.world_tag_pinmissleppmax: 10
+      #Ground
+        set.world_tag_digppmax: 10
+        set.world_tag_rolloutppmax: 10
+        set.world_tag_smackdownppmax: 10
+        set.world_tag_fissureppmax: 10
+        set.world_tag_sandstormppmax: 10
+      #Poison
+        set.world_tag_venoshockppmax: 10
+        set.world_tag_toxicspikesppmax: 10
+        set.world_tag_gunkshotppmax: 10
+        set.world_tag_poisonstingppmax: 10
+        set.world_tag_acidarmorppmax: 10
+        set.world_tag_smogppmax: 10
+      #Flying
+        set.world_tag_gustppmax: 10
+        set.world_tag_acrobaticsppmax: 10
+        set.world_tag_hurricaneppmax: 10
+        set.world_tag_aerialaceppmax: 10
+        set.world_tag_flyppmax: 15
+      #Fighting
+        set.world_tag_aurasphereppmax: 10
+        set.world_tag_brickbreakppmax: 10
+        set.world_tag_drainpunchppmax: 10
+        set.world_tag_dynamicpunchppmax: 10
+        set.world_tag_forcepalmppmax: 10
+        set.world_tag_seismictossppmax: 10
+        set.world_tag_skyuppercutppmax: 10
+      #Normal
+        set.world_tag_dizzypunchppmax: 10
+        set.world_tag_furyswipesppmax: 10
+        set.world_tag_teeterdanceppmax: 10
+        set.world_tag_hyperbeamppmax: 10
+        set.world_tag_restppmax: 10
+        set.world_tag_cometpunchppmax: 10
+      #Fairy
+        set.world_tag_moonblastppmax: 5
+        
+        
+        if entity.is.player
+            entity.start.tick.17
+on Command
+    pokemon *param
+        if param.icontains."reset"
+            untag.sender.psychic
+            untag.sender.teleport
+            untag.sender.futuresight
+            untag.sender.gravity
+            untag.sender.psywave
+            untag.sender.confusion
+            untag.sender.flamecharge
+            untag.sender.willowisp
+            untag.sender.flameburst
+            untag.sender.flareblitz
+            untag.sender.flamethrower
+            untag.sender.cometpunch
+            untag.sender.moonblast
+        elseif param.icontains."seen"
+            set.$t: param_indexOf(" ")+1
+            with param_substring($t,param_length) as thename
+                with server_timemillis-playernamed(thename)_firstPlayed as subtractedf
+                    with toint(subtractedf/86400000) as dysf
+                        with toint((subtractedf-(dysf*86400000))/3600000) as hosf
+                            with toint((subtractedf-(dysf*86400000)-(hosf*3600000))/60000) as minsf
+                                with toint((subtractedf-(dysf*86400000)-(hosf*3600000)-(minsf*60000))/1000) as secsf
+                                    message.sender
+                                        "&c%{thename} was first seen %{dysf} days, %{hosf} hours, %{minsf} minutes, %{secsf} seconds ago."
+                with server_timemillis-playernamed(thename)_lastPlayed as subtracted
+                    with toint(subtracted/86400000) as dys
+                        with toint((subtracted-(dys*86400000))/3600000) as hos
+                            with toint((subtracted-(dys*86400000)-(hos*3600000))/60000) as mins
+                                with toint((subtracted-(dys*86400000)-(hos*3600000)-(mins*60000))/1000) as secs
+                                    message.sender
+                                        "&c%{thename} was last seen %{dys} days, %{hos} hours, %{mins} minutes, %{secs} seconds ago."
+        elseif param.icontains."general"
+            message.sender
+                "&2====================================================="
+                "Use &a/pokemon {moveName}&f to see more details on that move!"
+                "Use &a/set {moveName}&f to set certain moves to your current held slot!"
+                "&6Make sure it is a settable move first!"
+                "For example: Choose slot 4 as your current held item, then: &4 &5 &6 &c/set confusion"
+                "Now that move will happen when you have slot 4 selected!"
+                "Use &a/pokemon reset&f to clear ALL slots!"
+                "&2====================================================="
+        elseif param.icontains."types"
+            message.sender
+                "&1====================================================="
+                "&aYou are Type &0&lD&8ar&0&lk"
+                "&aYou are Type &9Dragon"
+                "&aYou are Type &b&oIce"
+                "&aYou are Type &5&oPsychic"
+                "&aYou are Type &e&nElectric"
+                "&aYou are Type &2Grass"
+                "&aYou are Type &1Water"
+                "&aYou are Type &4&nFire"
+                "&aYou are Type &7&lSteel"
+                "&aYou are Type &0&k[&0Ghost&k]"
+                "&aYou are Type &a&nBug"
+                "&aYou are Type &8&lGround"
+                "&aYou are Type &5&oPoison"
+                "&aYou are Type &7&oFlying"
+                "&aYou are Type &6Fighting"
+                "&aYou are Type &rNormal"
+                "&aYou are Type &cF&ba&ci&br&cy"
+        elseif param.icontains."type"
+            message.sender
+                "&c====================================================="
+            if sender.group.Defaulto
+                message.sender
+                    "&4You haven't chosen a type, you need to!"
+                    "&cYou won't be able to talk, and you will die from 1 damage!"
+            if sender.group.Normal
+                message.sender
+                    "&aYou are Type &rNormal"
+                    "&aCurrent Level: &e%{sender_tag_normallevel}"
+                    "&aCurrent Exp: &e%{sender_tag_normalexp}/%{(sender_tag_normallevel*100)+20}"
+            if sender.group.Fighting
+                message.sender
+                    "&aYou are Type &6Fighting"
+                    "&aCurrent Level: &e%{sender_tag_fightinglevel}"
+                    "&aCurrent Exp: &e%{sender_tag_fightingexp}/%{(sender_tag_fightinglevel*100)+20}"
+            if sender.group.Flying
+                message.sender
+                    "&aYou are Type &7&oFlying"
+                    "&aCurrent Level: &e%{sender_tag_flyinglevel}"
+                    "&aCurrent Exp: &e%{sender_tag_flyingexp}/%{(sender_tag_flyinglevel*100)+20}"
+            if sender.group.Poison
+                message.sender
+                    "&aYou are Type &5&oPoison"
+                    "&aCurrent Level: &e%{sender_tag_poisonlevel}"
+                    "&aCurrent Exp: &e%{sender_tag_poisonexp}/%{(sender_tag_poisonlevel*100)+20}"
+            if sender.group.Ground
+                message.sender
+                    "&aYou are Type &8&lGround"
+                    "&aCurrent Level: &e%{sender_tag_groundlevel}"
+                    "&aCurrent Exp: &e%{sender_tag_groundexp}/%{(sender_tag_groundlevel*100)+20}"
+            if sender.group.Bug
+                message.sender
+                    "&aYou are Type &a&nBug"
+                    "&aCurrent Level: &e%{sender_tag_buglevel}"
+                    "&aCurrent Exp: &e%{sender_tag_bugexp}/%{(sender_tag_buglevel*100)+20}"
+            if sender.group.Ghost
+                message.sender
+                    "&aYou are Type &0&kl&0Ghost"
+                    "&aCurrent Level: &e%{sender_tag_ghostlevel}"
+                    "&aCurrent Exp: &e%{sender_tag_ghostexp}/%{(sender_tag_ghostlevel*100)+20}"
+            if sender.group.Steel
+                message.sender
+                    "&aYou are Type &7&lSteel"
+                    "&aCurrent Level: &e%{sender_tag_steellevel}"
+                    "&aCurrent Exp: &e%{sender_tag_steelexp}/%{(sender_tag_steellevel*100)+20}"
+            if sender.group.Fire
+                message.sender
+                    "&aYou are Type &4&nFire"
+                    "&aCurrent Level: &e%{sender_tag_firelevel}"
+                    "&aCurrent Exp: &e%{sender_tag_fireexp}/%{(sender_tag_firelevel*100)+20}"
+            if sender.group.Water
+                message.sender
+                    "&aYou are Type &1Water"
+                    "&aCurrent Level: &e%{sender_tag_waterlevel}"
+                    "&aCurrent Exp: &e%{sender_tag_waterexp}/%{(sender_tag_waterlevel*100)+20}"
+            if sender.group.Grass
+                message.sender
+                    "&aYou are Type &2Grass"
+                    "&aCurrent Level: &e%{sender_tag_grasslevel}"
+                    "&aCurrent Exp: &e%{sender_tag_grassexp}/%{(sender_tag_grasslevel*100)+20}"
+            if sender.group.Electric
+                message.sender
+                    "&aYou are Type &e&nElectric"
+                    "&aCurrent Level: &e%{sender_tag_electriclevel}"
+                    "&aCurrent Exp: &e%{sender_tag_electricexp}/%{(sender_tag_electriclevel*100)+20}"
+            if sender.group.Psychic
+                message.sender
+                    "&aYou are Type &5&oPsychic"
+                    "&aCurrent Level: &e%{sender_tag_psychiclevel}"
+                    "&aCurrent Exp: &e%{sender_tag_psychicexp}/%{(sender_tag_psychiclevel*100)+20}"
+            if sender.group.Ice
+                message.sender
+                    "&aYou are Type &b&oIce"
+                    "&aCurrent Level: &e%{sender_tag_icelevel}"
+                    "&aCurrent Exp: &e%{sender_tag_iceexp}/%{(sender_tag_icelevel*100)+20}"
+            if sender.group.Dragon
+                message.sender
+                    "&aYou are Type &9Dragon"
+                    "&aCurrent Level: &e%{sender_tag_dragonlevel}"
+                    "&aCurrent Exp: &e%{sender_tag_dragonexp}/%{(sender_tag_dragonlevel*100)+20}"
+            if sender.group.Dark
+                message.sender
+                    "&aYou are Type &0&lD&8ar&0&lk"
+                    "&aCurrent Level: &e%{sender_tag_darklevel}"
+                    "&aCurrent Exp: &e%{sender_tag_darkexp}/%{(sender_tag_darklevel*100)+20}"
+            if sender.group.Fairy
+                message.sender
+                    "&aYou are Type &cF&ba&ci&br&cy"
+                    "&aCurrent Level: &e%{sender_tag_fairylevel}"
+                    "&aCurrent Exp: &e%{sender_tag_fairyexp}/%{(sender_tag_fairylevel*100)+20}"
+        elseif param.icontains."moves"
+            message.sender
+                "====================================================="
+                "&bUse &a/pokemon {moveName} &bfor more details on that move!"
+                "&2If Slot is &c0&2, it is not assigned and will not activate, you'll need to &a/set&2 it."
+            switch.sender.group
+                Defaulto
+                    message.sender
+                        "&c&lYou have no moves because you haven't decided what kind of Pokemon you want to be!"
+            #Dark
+                Dark
+                    message.sender
+                        'MoveName  |  Slot: N/A or %{sender_tag_movename}  |  PP: %{sender_tag_movenamepp}/%{worldnamed("world")_tag_movenameppmax}'
+            #Dragon
+                Dragon
+                    message.sender
+                        'MoveName  |  Slot: N/A or %{sender_tag_movename}  |  PP: %{sender_tag_movenamepp}/%{worldnamed("world")_tag_movenameppmax}'
+            #Ice
+                Ice
+                    message.sender
+                        'MoveName  |  Slot: N/A or %{sender_tag_movename}  |  PP: %{sender_tag_movenamepp}/%{worldnamed("world")_tag_movenameppmax}'
+            #Psychic
+                Psychic
+                    message.sender
+                        'Gravity  |  Slot: %{sender_tag_gravity}  | PP: %{sender_tag_gravitypp}/%{worldnamed("world")_tag_gravityppmax}'
+                        'Confusion  |  Slot: %{sender_tag_confusion}  | PP: %{sender_tag_confusionpp}/%{worldnamed("world")_tag_confusionppmax}'
+                        'Psywave  |  Slot: %{sender_tag_psywave}  | PP: %{sender_tag_psywavepp}/%{worldnamed("world")_tag_psywaveppmax}'
+                        'Future Sight  |  Slot: %{sender_tag_futuresight}  | PP: %{sender_tag_futuresightpp}/%{worldnamed("world")_tag_futuresightppmax}'
+                        'Psychic  |  Slot: %{sender_tag_psychic}  | PP: %{sender_tag_psychicpp}/%{worldnamed("world")_tag_psychicppmax}'
+                        'Teleport  |  Slot: %{sender_tag_teleport}  | PP: %{sender_tag_teleportpp}/%{worldnamed("world")_tag_teleportppmax}'
+                        'Agility  |  Slot: N/A  | PP: %{sender_tag_agilitypp}/%{worldnamed("world")_tag_agilityppmax}'
+                        'Roleplay  |  Slot: N/A  | PP: %{sender_tag_roleplaypp}/%{worldnamed("world")_tag_roleplayppmax}'
+            #Electric
+                Electric
+                    message.sender
+                        'MoveName  |  Slot: N/A or %{sender_tag_movename}  |  PP: %{sender_tag_movenamepp}/%{worldnamed("world")_tag_movenameppmax}'
+            #Grass
+                Grass
+                    message.sender
+                        'MoveName  |  Slot: N/A or %{sender_tag_movename}  |  PP: %{sender_tag_movenamepp}/%{worldnamed("world")_tag_movenameppmax}'
+            #Water
+                Water
+                    message.sender
+                        'Aqua Jet  |  Slot: %{sender_tag_aquajet}  | PP: %{sender_tag_aquajetpp}/%{worldnamed("world")_tag_aquajetppmax}'
+                        'Aqua Ring  |  Slot: %{sender_tag_aquaring}  |  PP: %{sender_tag_aquaringpp}/%{worldnamed("world")_tag_aquaringppmax}'
+                        'Rain Dance  |  Slot: %{sender_tag_raindance}  |  PP: %{sender_tag_raindancepp}/%{worldnamed("world")_tag_raindanceppmax}'
+                        'Hydro Cannon  |  Slot: %{sender_tag_hydrocannon}  | PP: %{sender_tag_hydrocannonpp}/%{worldnamed("world")_tag_hydrocannonppmax}'
+                        'Waterfall  |  Slot: %{sender_tag_waterfall}  |  PP: %{sender_tag_waterfallpp}/%{worldnamed("world")_tag_waterfallppmax}'
+            #Fire
+                Fire
+                    message.sender
+                        'Flare Blitz  |  Slot: %{sender_tag_flareblitz}  | PP: %{sender_tag_flareblitzpp}/%{worldnamed("world")_tag_flareblitzppmax}'
+                        'Flame Burst  |  Slot: %{sender_tag_flameburst}  | PP: %{sender_tag_flameburstpp}/%{worldnamed("world")_tag_flameburstppmax}'
+                        'Will O Wisp  |  Slot: %{sender_tag_willowisp}  | PP: %{sender_tag_willowisppp}/%{worldnamed("world")_tag_willowispppmax}'
+                        'Flame Charge  |  Slot: %{sender_tag_flamecharge}  | PP: %{sender_tag_flamechargepp}/%{worldnamed("world")_tag_flamechargeppmax}'
+            #Steel
+                Steel
+                    message.sender
+                        'MoveName  |  Slot: N/A or %{sender_tag_movename}  |  PP: %{sender_tag_movenamepp}/%{worldnamed("world")_tag_movenameppmax}'
+            #Ghost
+                Ghost
+                    message.sender
+                        'Confuse Ray  |  Slot: %{sender_tag_confuseray}  |  PP: %{sender_tag_confuseraypp}/%{worldnamed("world")_tag_confuserayppmax}'
+                        'Shadow Claw  |  Slot: %{sender_tag_shadowclaw}  |  PP: %{sender_tag_shadowclawpp}/%{worldnamed("world")_tag_shadowclawppmax}'
+                        'Night Shade  |  Slot: %{sender_tag_nightshade}  |  PP: %{sender_tag_nightshadepp}/%{worldnamed("world")_tag_nightshadeppmax}'
+                        'Destiny Bond  |  Slot: N/A  |  PP: %{sender_tag_destinybondpp}/%{worldnamed("world")_tag_destinybondppmax}'
+                        'Shadow Punch  |  Slot: %{sender_tag_shadowpunch}  |  PP: %{sender_tag_shadowpunchpp}/%{worldnamed("world")_tag_shadowpunchppmax}'
+                        'Perish Song  |  Slot: N/A  |  PP: %{sender_tag_perishsongpp}/%{worldnamed("world")_tag_perishsongppmax}'
+            #Bug
+                Bug
+                    message.sender
+                        'MoveName  |  Slot: N/A or %{sender_tag_movename}  |  PP: %{sender_tag_movenamepp}/%{worldnamed("world")_tag_movenameppmax}'
+            #Ground
+                Ground
+                    message.sender
+                        'MoveName  |  Slot: N/A or %{sender_tag_movename}  |  PP: %{sender_tag_movenamepp}/%{worldnamed("world")_tag_movenameppmax}'
+            #Poison
+                Poison
+                    message.sender
+                        'MoveName  |  Slot: N/A or %{sender_tag_movename}  |  PP: %{sender_tag_movenamepp}/%{worldnamed("world")_tag_movenameppmax}'
+            #Flying
+                Flying
+                    message.sender
+                        '&rFly  |  Slot: N/A  | PP: %{sender_tag_flypp}/%{worldnamed("world")_tag_flyppmax}'
+            #Fighting
+                Fighting
+                    message.sender
+                        'MoveName  |  Slot: N/A or %{sender_tag_movename}  |  PP: %{sender_tag_movenamepp}/%{worldnamed("world")_tag_movenameppmax}'
+            #Normal
+                Normal
+                    message.sender
+                        '&rRest  |  Slot: N/A  |  PP: %{sender_tag_restpp}/%{worldnamed("world")_tag_restppmax}'
+                        '&rComet Punch  |  Slot: %{sender_tag_cometpunch}  |  PP: %{sender_tag_cometpunchpp}/%{worldnamed("world")_tag_cometpunchppmax}'
+            #Fairy
+                Fairy
+                    message.sender
+                        'Moon Blast  |  Slot: %{sender_tag_moonblast}  |  PP: %{sender_tag_moonblastpp}/%{worldnamed("world")_tag_moonblastppmax}'
+            message.sender
+                "====================================================="
+  #help sections for each move:
+    #Dark
+    #Dragon
+    #Ice
+        elseif param_replace(" ","").icontains."sheercold"
+            message.sender
+                "&b=====================SHEERCOLD======================="
+                "Type: Ice"
+                "Usage: Say &8/sheercold&r with enemies nearby to freeze them to &ndeath"
+                "High powered attack that leaves freezing carcasses around you"
+                "Radius: %{toint(5+((sender_tag_icelevel*sender_tag_icelevel)/500))}"
+                "&b====================================================="
+    #Psychic
+        elseif param.icontains."gravity"
+            message.sender
+                "&5======================GRAVITY========================"
+                "Type: Psychic"
+                "Usage: &5Crouch-Right click a block&f with flying enemies nearby"
+                "Stops all flying and levitating pokemon, grounding them, radius grows with level"
+                "Radius: %{sender_tag_psychiclevel/4}"
+                "&5====================================================="
+        elseif param_replace(" ","").icontains."futuresight"
+            message.sender
+                "&5====================FUTURESIGHT======================"
+                "Type: Psychic"
+                "Usage: &5Crouch-Right click an entity&f, like a mob or player"
+                "Causes damage after a delay, damage increases with level"
+                "Damage: %{(sender_tag_psychiclevel/5)-1}"
+                "&5====================================================="
+        elseif param.icontains."psychic"
+            message.sender
+                "&5======================PSYCHIC========================"
+                "Type: Psychic"
+                "Usage: &5Crouch-Right click a block&f with enemies nearby"
+                "Launches everything nearby into the air, radius and power grow with level"
+                "Radius: %{sqrt(2*sender_tag_psychiclevel)+1}"
+                "Vertical Power: %{sender_tag_psychiclevel/5}"
+                "Knockaway Power: %{sender_tag_psychiclevel*2/5}"
+                "&5====================================================="
+        elseif param.icontains."confusion"
+            message.sender
+                "&5=====================CONFUSION======================="
+                "Type: Psychic"
+                "Usage: &5Crouch-Right click an enemy"
+                "Cause a Pokemon to see funny, damage them, and possibly attack itself, duration and damage increase with level"
+                "Duration: %{((sender_tag_psychiclevel/5)+1)} seconds"
+                "Damage: %{sender_tag_psychiclevel/10}"
+                "&5====================================================="
+        elseif param.icontains."agility"
+            message.sender
+                "&5======================AGILITY========================"
+                "Type: Psychic"
+                "Usage: Say &5/agility"
+                "Get a small speed boost, duration increases with level"
+                "Duration: %{sender_tag_psychiclevel/2} seconds"
+                "&5====================================================="
+        elseif param_replace(" ","").icontains."roleplay"
+            message.sender
+                "&5=====================ROLEPLAY========================"
+                "Type: Psychic"
+                "Usage: Say &5/roleplay *whatever you want*&f with people nearby"
+                "Force another pokemon to say whatever you want, range increases with level"
+                "Range: %{sender_tag_psychiclevel/2}"
+                "&5====================================================="
+        elseif param.icontains."psywave"
+            message.sender
+                "&5======================PSYWAVE========================"
+                "Type: Psychic"
+                "Usage: &5Crouch-Right click a block&f with enemies nearby"
+                "Causes a random amount of damage to an enemy near you, damage and range can increase with level"
+                "Damage: %{sender_tag_psychiclevel / 20} to %{sender_tag_psychiclevel*3/20}"
+                "Range: %{sender_tag_psychiclevel/3}"
+                "&5====================================================="
+        elseif param.icontains."teleport"
+            message.sender
+                "&5======================TELEPORT======================="
+                "Type: Psychic"
+                "Usage: &5&mCrouch-Right click the target&f&m location with something in hand"
+                "Moves you from one spot to another instantly, max range increases with level"
+                "Max Range: %{sender_tag_psychiclevel}"
+                "&5====================================================="
+    #Electric
+    #Grass
+    #Water
+    #Fire
+        elseif param_replace(" ","").icontains."flareblitz"
+            message.sender
+                "&4======================FLAREBLITZ====================="
+                "Type: Fire"
+                "Usage: &4Crouch-Right click an enemy"
+                "Does a lot of damage, but gives recoil, damage increases with level"
+                "Damage: %{sender_tag_firelevel/6}"
+                "Recoil: %{sender_tag_firelevel/12}"
+                "&4====================================================="
+        elseif param_replace(" ","").icontains."flameburst"
+            message.sender
+                "&4======================FLAMEBURST====================="
+                "Type: Fire"
+                "Usage: &4Crouch-Right click&f with something in hand"
+                "Fires a white-hot ball of flame to ignite an area, range increases with level"
+                "Range: %{sender_tag_firelevel*3/4}"
+                "&4====================================================="
+        elseif param_replace(" ","").icontains."willowisp"
+            message.sender
+                "&4======================WILLOWISP======================"
+                "Type: Fire"
+                "Usage: &4Crouch-Right click a block&f with an enemy nearby"
+                "Gives a harsh burn to the opponent, range and duration increase with level"
+                "Range: %{(sender_tag_firelevel/10)+5}"
+                "Duration: %{sender_tag_firelevel/5} seconds"
+                "&4====================================================="
+        elseif param_replace(" ","").icontains."flamecharge"
+            message.sender
+                "&4=====================FLAMECHARGE====================="
+                "Type: Fire"
+                "Usage: &4Crouch-Right click an enemy"
+                "Damage the enemy, and gain a speed boost, damage and duration increase with level"
+                "Damage: %{sqrt(sender_tag_firelevel*22/25)}"
+                "Duration: %{sqrt(sender_tag_firelevel*9/4)} seconds"
+                "&4====================================================="
+    #Steel
+    #Ghost
+        elseif param_replace(" ","").icontains."confuseray"
+            message.sender
+                "&0=====================CONFUSERAY======================"
+                "Type: Ghost"
+                "Usage: &8Right click the ground&f with enemies nearby"
+                "Give nearby enemies a confused screen, and possibly hurt themselves, area of effect and duration increase with level"
+                "Distance of effect: %{sender_tag_ghostlevel/4}"
+                "Duration: %{sender_tag_ghostlevel/3}"
+                "&0====================================================="
+        elseif param_replace(" ","").icontains."shadowclaw"
+            message.sender
+                "&0====================SHADOWCLAW======================"
+                "Type: Ghost"
+                "Usage: &8Crouch right-click an enemy"
+                "Chance for critical damage, higher chance with higher levels"
+                "&0====================================================="
+        elseif param_replace(" ","").icontains."shadowpunch"
+            message.sender
+                "&0====================================================="
+                "Type: Ghost"
+                "Usage: &8Right click the ground &fwith an enemy nearby"
+                "An attack that never misses the nearest living target, distance increases with level"
+                "Distance: %{2*sender_tag_ghostlevel/7}"
+                "&0====================================================="
+        elseif param_replace(" ","").icontains."nightshade"
+            message.sender
+                "&0====================================================="
+                "Type: Ghost"
+                "Usage: &8Crouch right-click an enemy"
+                "Hurt an enemy with damage that scales with your level"
+                "Damage: %{1 + (sender_tag_psychiclevel / 10)}"
+                "&0====================================================="
+        elseif param_replace(" ","").icontains."destinybond"
+            message.sender
+                "&0=====================DESTINYBOND====================="
+                "Type: Ghost"
+                "Usage: Say &8/destinybond&f before you prepare to die"
+                "Kill the opponent if they kill you in time, duration increases with level"
+                "Duration: %{sqrt(sender_tag_ghostlevel*2)}"
+                "&0====================================================="
+        elseif param_replace(" ","").icontains."perishsong"
+            message.sender
+                "&0=====================PERISHSONG======================"
+                "Type: Ghost"
+                "Usage: Say &8/perishsong&f if you want to kill yourself and someone else"
+                "Kills you and the opponent if you both don't escape in time, distance and escape distance increase with level"
+                "Distance of Effect: %{sender_tag_ghostlevel/3}"
+                "Escape Distance: %{5*sqrt(sender_tag_ghostlevel)} blocks"
+                "&0====================================================="
+    #Bug
+    #Ground
+    #Poison
+    #Flying
+        elseif param.icontains."fly"
+            message.sender
+                "&7========================FLY=========================="
+                "Type: Flying"
+                "Usage: Crouch while jumping or falling in the air to start flying for a set time"
+                "Fly through the air without caring about obstacles, duration slowly increases with level"
+                "Flight Duration: %{toint(20 + (sender_tag_flyinglevel*sender_tag_flyinglevel*sender_tag_flyinglevel/25000))} seconds"
+                "&7====================================================="
+    #Fighting
+    #Normal
+        elseif param_replace(" ","").icontains."cometpunch"
+            message.sender
+                "&r====================COMETPUNCH======================="
+                "Type: Normal"
+    #Fairy
+        elseif param_replace(" ","").icontains."moonblast"
+            message.sender
+                "&b=====================MOONBLAST======================="
+                "Type: Fairy"
+                "Usage: &5Crouch-Right click a block&r with an enemy nearby"
+                "Damages a nearby target based on the strength of the moon"
+                "Radius: %{toint(3+sender_tag_fairylevel/5)}"
+            #8 at night
+            if world_moonphase == 0
+                set.$moondmg: 6.7
+            #3 at night
+            elseif world_moonphase == 2
+                set.$moondmg: 2.5
+            elseif world_moonphase == 6
+                set.$moondmg: 2.5
+            #5 at night
+            elseif world_moonphase == 1
+                set.$moondmg: 4.2
+            elseif world_moonphase == 7
+                set.$moondmg: 4.2
+            #1 at night
+            else
+                set.$moondmg: 1
+            if world_time > 13000 and world_time < 23000
+                set.$moondmg: $moondmg*1.2
+            message.sender
+                "Damage: %{toint($moondmg)}"
+        elseif param.icontains."credits"
+            message.sender
+                "====================================================="
+                "Tenebraemaximus-Alpha Tester"
+                "Anonymouslyanon-Alpha Tester"
+                "VIROS-Spawn Builder"
+                "====================================================="
+        else
+            message.sender
+                "&bUse &a/pokemon general&b for need to know information!"
+                "&bUse &a/pokemon type&b for information on your Pokemon Type!"
+                "&bUse &a/pokemon moves&b for your moves' information!"
+  #pokemon attacks via commands:
+    #Dark
+    #Dragon
+    #Ice
+    sheercold
+        if sender.group.Ice
+            if !sender.biome.sky
+                if sender_tag_sheercoldpp > 0
+                    set.sender_tag_sheercoldpp: sender_tag_sheercoldpp-1
+                    nearby.sender.LIVING.5+((sender_tag_icelevel*sender_tag_icelevel)/500)
+                        if it!=sender
+                            if chance.75
+                                set.world_block(it_x,it_y,it_z)_typeid: 174
+                            else
+                                set.world_block(it_x,it_y,it_z)_typeid: 79
+                            if chance.75
+                                set.world_block(it_x,it_y+1,it_z)_typeid: 174
+                            else
+                                set.world_block(it_x,it_y,it_z)_typeid: 79
+                            for anX from it_x-1 to it_x+2
+                                for anY from it_y-1 to it_y+2
+                                    for anZ from it_z-1 to it_z+2
+                                        if world_block(anX,anY,anZ)_typeid==0
+                                            if chance.75
+                                                set.world_block(anX,anY,anZ)_typeid: 174
+                                            else
+                                                set.world_block(anX,anY,anZ)_typeid: 79
+                            for anX from it_x-2 to it_x+3
+                                for anY from it_y-2 to it_y+3
+                                    for anZ from it_z-2 to it_z+3
+                                        if world_block(anX,anY,anZ)_typeid==0
+                                            set.world_block(anX,anY,anZ)_typeid: 79
+                                            delay.50
+                                                set.world_block(anX,anY,anZ)_typeid: 0
+            else
+                message.sender
+                    "&4No attacks in spawn! You might break something!"
+        else
+            message.sender
+                "&cYou are not an Ice type Pokemon."
+    sheer cold
+        command.sender
+            "/sheercold"
+    #Psychic
+    agility
+        if sender.group.Psychic
+            if !sender.biome.sky
+                if sender_tag_agilitypp > 0
+                    set.sender_tag_agilitypp: sender_tag_agilitypp-1
+                    sender.addpotioneffect.SPEED.sender_tag_psychiclevel*10,3
+                    message.sender
+                        "&5You used Agility for %{sender_tag_psychiclevel/2} seconds!"
+                else
+                    message.sender
+                        "&cNo PP for Agility! You need to let it recover!"
+            else
+                message.sender
+                    "&4No attacks in spawn! You might break something!"
+        else
+            message.sender
+                "&cYou are not a Psychic type Pokemon."
+    roleplay *rest
+        if sender.group.Psychic
+            if !sender.biome.sky
+                if sender_tag_roleplaypp > 0
+                    nearest.sender.player.(sender_tag_psychiclevel/2)
+                        set.sender_tag_roleplaypp: sender_tag_roleplaypp-1
+                        if sender.cansee.it
+                            if !it.haspermission.override
+                                it.chat
+                                    "%{rest}"
+                            else
+                                message.sender
+                                    "&cYou tried to RolePlay an admin. Too op."
+                        else
+                            message.sender
+                                "&cRole Play missed!"
+                            message.it
+                                "&bSomeone tried to Role Play you, move away so it stops failing them!"
+                else
+                    message.sender
+                        "&cNo PP for Role Play! You need to let it recover!"
+            else
+                message.sender
+                    "&4No attacks in spawn! You might break something!"
+        else
+            message.sender
+                "&cYou are not a Psychic type Pokemon."
+    role play *rest
+        command.sender
+            "/roleplay %{rest}"
+    #Electric
+    #Grass
+    petaldance
+        if sender.group.Grass
+            if !sender.biome.sky
+                if sender_tag_petaldancepp > 0
+                    set.sender_tag_petaldancepp: sender_tag_petaldancepp-1
+                    sender.start.petaldance.(40).(2*sqrt(sender_tag_grasslevel))
+                    message.sender
+                        "&2You used &aPETAL DANCE!"
+                else
+                    message.sender
+                        "&cNo PP for Petal Dance! You need to let it recover!"
+            else
+                message.sender
+                    "&4No attacks in spawn! You might break something!"
+        else
+            message.sender
+                "&cYou are not a Grass type Pokemon."
+    petal dance
+        command.sender
+            "/petaldance"
+    #Water
+    #Fire
+    #Steel
+    #Ghost
+    destinybond
+        if sender.group.Ghost
+            if !sender.biome.sky
+                if sender_tag_destinybondpp > 0
+                    set.sender_tag_destinybondpp: sender_tag_destinybondpp-1
+                    set.sender_tag_destinybondeffect: 1
+                    delay.sqrt(sender_tag_ghostlevel*2)*20
+                        untag.sender.destinybondeffect
+                else
+                    message.sender
+                        "&cNo PP for Destiny Bond! You need to let it recover!"
+            else
+                message.sender
+                    "&4No attacks in spawn! You might break something!"
+        else
+            message.sender
+                "&cYou are not a Ghost type Pokemon."
+    destiny bond
+        command.sender
+            "/destinybond"
+    perishsong
+        if sender.group.Ghost
+            if !sender.biome.sky
+                if sender_tag_perish <= 0
+                    if sender_tag_perishsongpp > 0
+                        set.$yval: sender_y
+                        set.$xval: sender_x
+                        set.$zval: sender_z
+                        set.sender_tag_perish: 3
+                        set.sender_tag_perishsongpp: sender_tag_perishsongpp-1
+                        message.sender
+                            "&5You used Perish Song! Run!"
+                        delay.60
+                            if sqrt(((sender_x-$xval)*(sender_x-$xval))+((sender_y-$yval)*(sender_y-$yval))+((sender_z-$zval)*(sender_z-$zval))) > 5*sqrt(sender_tag_ghostlevel)
+                                if sender.istagged.perish
+                                    message.sender
+                                        "&dYou are safe from the effects of the PERISH SONG..."
+                                    untag.sender.perish
+                            else
+                                set.sender_tag_perish: 2
+                                message.sender
+                                    "&cKeep Running!"
+                                delay.60
+                                    if sqrt(((sender_x-$xval)*(sender_x-$xval))+((sender_y-$yval)*(sender_y-$yval))+((sender_z-$zval)*(sender_z-$zval))) > 5*sqrt(sender_tag_ghostlevel)
+                                        if sender.istagged.perish
+                                            message.sender
+                                                "&dYou are safe from the effects of the PERISH SONG..."
+                                            untag.sender.perish
+                                    else
+                                        set.sender_tag_perish: 1
+                                        message.sender
+                                            "&4Keep Running!!"
+                                        delay.60
+                                            if sqrt(((sender_x-$xval)*(sender_x-$xval))+((sender_y-$yval)*(sender_y-$yval))+((sender_z-$zval)*(sender_z-$zval))) > 5*sqrt(sender_tag_ghostlevel)
+                                                if sender.istagged.perish
+                                                    message.sender
+                                                        "&dYou are safe from the effects of the PERISH SONG..."
+                                                    untag.sender.perish
+                                            else
+                                                untag.sender.perish
+                                                command.console: "kill %{sender_name}"
+                        nearest.sender.player.(sender_tag_ghostlevel/3)
+                            message.sender
+                                "Perish Song hit %{it_name}!"
+                            message.it
+                                "&5%{sender_name} has used PERISH SONG! Run!"
+                            set.it_tag_perish: 3
+                            delay.60
+                                if sqrt(((it_x-$xval)*(it_x-$xval))+((it_y-$yval)*(it_y-$yval))+((it_z-$zval)*(it_z-$zval))) > 5*sqrt(sender_tag_ghostlevel)
+                                    if it.istagged.perish
+                                        untag.it.perish
+                                        message.it
+                                            "&dYou are safe from the effects of the PERISH SONG..."
+                                else
+                                    set.it_tag_perish: 2
+                                    message.it
+                                        "&cKeep Running!"
+                                    delay.60
+                                        if sqrt(((it_x-$xval)*(it_x-$xval))+((it_y-$yval)*(it_y-$yval))+((it_z-$zval)*(it_z-$zval))) > 5*sqrt(sender_tag_ghostlevel)
+                                            if it.istagged.perish
+                                                message.it
+                                                    "&dYou are safe from the effects of the PERISH SONG..."
+                                                untag.it.perish
+                                        else
+                                            set.it_tag_perish: 1
+                                            message.it
+                                                "&4Keep Running!!"
+                                            delay.60
+                                                if sqrt(((it_x-$xval)*(it_x-$xval))+((it_y-$yval)*(it_y-$yval))+((it_z-$zval)*(it_z-$zval))) > 5*sqrt(sender_tag_ghostlevel)
+                                                    if it.istagged.perish
+                                                        message.it
+                                                            "&dYou are safe from the effects of the PERISH SONG..."
+                                                        untag.it.perish
+                                                else
+                                                    untag.it.perish
+                                                    command.console: "kill %{it_name}"
+                    else
+                        message.sender
+                            "&cNo PP for Perish Song! You need to let it recover!"
+                else
+                    message.sender
+                        "&cHave you already used PerishSong? If not, something went wrong."
+            else
+                message.sender
+                    "&4No attacks in spawn! You might break something!"
+        else
+            message.sender
+                "&cYou are not a Ghost type Pokemon."
+    perish song
+        command.sender
+            "/perishsong"
+    #Bug
+    #Ground
+    #Poison
+    #Flying
+    #Fighting
+    #Normal
+    rest
+        if sender.group.Normal
+            if !sender.biome.sky
+                if sender_tag_restpp > 0
+                    set.sender_tag_restpp: sender_tag_restpp-1
+                    sender.addpotioneffect.SLOW.30*20,10
+                    sender.addpotioneffect.BLINDNESS.30*20,10
+                    set.sender_foodlevel: 20
+                    set.sender_health: 20
+                    set.sender_saturation: 15
+                    message.sender
+                        "You go to sleep and restore all hunger and health!"
+    #Fairy
+  #pokemon related
+    set %wrong #method
+        message.sender
+            "&cWrong syntax, /set uses your held slot, not a number in the command."
+    set &play %property #value
+        if sender_isOP
+            if property.imatches."health"
+                set.play_health: value
+            elseif property.imatches."maxhealth"
+                set.play_maxhealth: value
+            elseif property.imatches."foodlevel"
+                set.play_foodlevel: value
+        else
+            message.sender: "Nope.avi"
+    set %really %wrong #mthod
+        message.sender
+            "&cWrong syntax, /set uses your held slot, not a number in the command."
+    set *move
+        #Dark
+        #Dragon
+        #Ice
+        #Psychic
+        if sender.group.Psychic
+            if move.icontains."gravity"
+                set.sender_tag_gravity: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move_replace(" ","").icontains."futuresight"
+                set.sender_tag_futuresight: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move.icontains."psychic"
+                set.sender_tag_psychic: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move.icontains."confusion"
+                set.sender_tag_confusion: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move.icontains."psywave"
+                set.sender_tag_psywave: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move.icontains."teleport"
+                set.sender_tag_teleport: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            else
+                message.sender
+                    "&cPlease make sure you spelled the move in all lowercase, with no spaces. Something went wrong."
+                    "&dUse &8/pokemon %{move}&d to make sure it is a settable move!"
+        #Electric
+        #Grass
+        #Water
+        elseif sender.group.Water
+            if move_replace(" ","").icontains."hydrocannon"
+                set.sender_tag_hydrocannon: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move_replace(" ","").icontains."muddywater"
+                set.sender_tag_muddywater: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move_replace(" ","").icontains."hydrocannon"
+                set.sender_tag_hydrocannon: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            else
+                message.sender
+                    "&cPlease make sure you spelled the move in all lowercase, with no spaces. Something went wrong."
+                    "&dUse &8/pokemon %{move}&d to make sure it is a settable move!"
+        #Fire
+        elseif sender.group.Fire
+            if move_replace(" ","").icontains."flareblitz"
+                set.sender_tag_flareblitz: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move_replace(" ","").icontains."flameburst"
+                set.sender_tag_flameburst: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move_replace(" ","").icontains."willowisp"
+                set.sender_tag_willowisp: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move_replace(" ","").icontains."flamecharge"
+                set.sender_tag_flamecharge: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            else
+                message.sender
+                    "&cPlease make sure you spelled the move in all lowercase, with no spaces. Something went wrong."
+                    "&dUse &8/pokemon %{move}&d to make sure it is a settable move!"
+        #Steel
+        elseif sender.group.Steel
+            if move_replace(" ","").icontains."doomdesire"
+                set.sender_tag_doomdesire: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            else
+                message.sender
+                    "&cPlease make sure you spelled the move in all lowercase, with no spaces. Something went wrong."
+                    "&dUse &8/pokemon %{move}&d to make sure it is a settable move!"
+        #Ghost
+        elseif sender.group.Ghost
+            if move_replace(" ","").icontains."confuseray"
+                set.sender_tag_confuseray: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move_replace(" ","").icontains."shadowclaw"
+                set.sender_tag_shadowclaw: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move_replace(" ","").icontains."shadowpunch"
+                set.sender_tag_shadowpunch: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            elseif move_replace(" ","").icontains."nightshade"
+                set.sender_tag_nightshade: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            else
+                message.sender
+                    "&cPlease make sure you spelled the move in all lowercase, with no spaces. Something went wrong."
+                    "&dUse &8/pokemon %{move}&d to make sure it is a settable move!"
+        #Bug
+        #Ground
+        #Poison
+        #Flying
+        #Fighting
+        #Normal
+        elseif sender.Group.Normal
+            if move_replace(" ","").icontains."cometpunch"
+                set.sender_tag_cometpunch: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            else
+                message.sender
+                    "&cPlease make sure you spelled the move in all lowercase, with no spaces. Something went wrong."
+                    "&dUse &8/pokemon %{move}&d to make sure it is a settable move!"
+        #Fairy
+        elseif sender.group.Fairy
+            if move_replace(" ","").icontains."moonblast"
+                set.sender_tag_moonblast: (sender_held_slot +1)
+                message.sender
+                    "%{move} has been set to slot %{sender_held_slot +1}!"
+            else
+                message.sender
+                    "&cPlease make sure you spelled the move in all lowercase, with no spaces. Something went wrong."
+                    "&dUse &8/pokemon %{move}&d to make sure it is a settable move!"
+        else
+            message.sender
+                "&cYou are a Type that has no settable moves yet. Please wait until the server has been worked on longer."
+
+
+  #function related
+    settag &play %tagname #newvalue
+        if sender.haspermission.admin
+            set.play_tag_%{tagname}: newvalue
+            message.sender
+                "&e%{play_name}'s %{tagname} tag set to %{newvalue}"
+    gettag &play %tagname
+        if sender.haspermission.admin
+            message.sender
+                "&e%{play_name}'s %{tagname} value: %{play_tag_%{tagname}}"
+    untag &play %tagname
+        if sender.haspermission.admin
+            untag.play.%{tagname}
+            message.sender
+                "&cUntagged"
+    setstag &play %tagname *newvalue
+        if sender.haspermission.admin
+            set.play_stag_%{tagname}: '%{newvalue}'
+            message.sender
+                "&e%{play_name}'s %{tagname} stag set to"
+                "%{newvalue}"
+    getstag &play %tagname
+        if sender.haspermission.admin
+            message.sender
+                "&e%{play_name}'s %{tagname} value:"
+                "%{play_stag_%{tagname}}"
+    unstag &play %tagname
+        if sender.haspermission.admin
+            unstag.play.%{tagname}
+            message.sender
+                "&cUnstagged"
+    settag %play %tagname #newvalue
+        if sender.haspermission.admin
+            with playernamed(play) as newplay
+                set.newplay_tag_%{tagname}: newvalue
+                message.sender
+                    "%{newplay_name}'s %{tagname} tag set to %{newvalue}"
+    gettag %play %tagname
+        if sender.haspermission.admin
+            with playernamed(play) as newplay
+                message.sender
+                    "%{newplay_name}'s %{tagname} value: %{newplay_tag_%{tagname}}"
+    untag %play %tagname
+        if sender.haspermission.admin
+            with playernamed(play) as newplay
+                untag.newplay.%{tagname}
+                message.sender
+                    "&cUntagged"
+    setstag %play %tagname *newvalue
+        if sender.haspermission.admin
+            with playernamed(play) as newplay
+                set.newplay_stag_%{tagname}: "%{newvalue}"
+                message.sender
+                    "%{newplay_name}'s %{tagname} stag set to"
+                    "%{newvalue}"
+    getstag %play %tagname
+        if sender.haspermission.admin
+            with playernamed(play) as newplay
+                message.sender
+                    "%{newplay_name}'s %{tagname} value:"
+                    "%{newplay_stag_%{tagname}}"
+    unstag %play %tagname
+        if sender.haspermission.admin
+            with playernamed(play) as newplay
+                untag.newplay.%{tagname}
+                message.sender
+                    "&cUnstagged"
+    setworldtag %play %tagname #newvalue
+        if sender.haspermission.admin
+            with worldnamed(play) as newplay
+                set.newplay_tag_%{tagname}: newvalue
+                message.sender
+                    "World %{newplay_name}'s %{tagname} tag set to %{newvalue}"
+    getworldtag %play %tagname
+        if sender.haspermission.admin
+            with worldnamed(play) as newplay
+                message.sender
+                    "%{newplay_name}'s %{tagname} value: %{newplay_tag_%{tagname}}"
+    unworldtag %play %tagname
+        if sender.haspermission.admin
+            with worldnamed(play) as newplay
+                untag.newplay.%{tagname}
+                message.sender
+                    "&cUntagged"
+    setworldstag %play %tagname *newvalue
+        if sender.haspermission.admin
+            with worldnamed(play) as newplay
+                set.newplay_stag_%{tagname}: "%{newvalue}"
+                message.sender
+                    "%{newplay_name}'s %{tagname} stag set to"
+                    "%{newvalue}"
+    getworldstag %play %tagname
+        if sender.haspermission.admin
+            with worldnamed(play) as newplay
+                message.sender
+                    "%{newplay_name}'s %{tagname} value:"
+                    "%{newplay_stag_%{tagname}}"
+    unworldstag %play %tagname
+        if sender.haspermission.admin
+            with worldnamed(play) as newplay
+                untag.newplay.%{tagname}
+                message.sender
+                    "&cUnstagged"
+    setloctag #myx #myy #myz %tagname #newvalue
+        if sender.haspermission.admin
+            with world_loc(myx,myy,myz) as newplay
+                set.newplay_tag_%{tagname}: newvalue
+                message.sender
+                    "(%{myx}, %{myy}, %{myz})'s %{tagname} tag set to %{newvalue}"
+    getloctag #myx #myy #myz %tagname
+        if sender.haspermission.admin
+            with world_loc(myx,myy,myz) as newplay
+                message.sender
+                    "(%{myx}, %{myy}, %{myz})'s %{tagname} value: %{newplay_tag_%{tagname}}"
+    unloctag #myx #myy #myz %tagname
+        if sender.haspermission.admin
+            with world_loc(myx,myy,myz) as newplay
+                untag.newplay.%{tagname}
+                message.sender
+                    "&cUntagged"
+    setlocstag #myx #myy #myz %tagname *newvalue
+        if sender.haspermission.admin
+            with world_loc(myx,myy,myz) as newplay
+                set.newplay_stag_%{tagname}: "%{newvalue}"
+                message.sender
+                    "(%{myx}, %{myy}, %{myz})'s %{tagname} stag set to"
+                    "%{newvalue}"
+    getlocstag #myx #myy #myz %tagname
+        if sender.haspermission.admin
+            with world_loc(myx,myy,myz) as newplay
+                message.sender
+                    "(%{myx}, %{myy}, %{myz})'s %{tagname} value:"
+                    "%{newplay_stag_%{tagname}}"
+    unlocstag #myx #myy #myz %tagname
+        if sender.haspermission.admin
+            with world_loc(myx,myy,myz) as newplay
+                untag.newplay.%{tagname}
+                message.sender
+                    "&cUnstagged"
+    tags &targ
+        message.sender
+            "%{targ_tags}"
+    tags *rest
+        if rest_length == 0
+            message.sender
+                "%{sender_tags}"
+        else
+            with playernamed(rest) as theplayer
+                message.sender
+                    "%{theplayer_tags}"
+
+    getlogin %nooblet
+        with playernamed_%{nooblet} as thisthing
+            with thisthing_stag_loginmsg as thetag
+                message.sender: '%{thetag_replace("&","§")}'
+    getlogout %nooblet
+        with playernamed_%{nooblet} as thisthing
+            with thisthing_stag_logoutmsg as thetags
+                message.sender: '%{thetags_replace("&","§")}'
+    removelogin %asdf
+        if sender.haspermission.md.lbl or !sender.type.player
+            with playernamed_%{asdf} as fdsa
+                unstag.fdsa.loginmsg
+                if sender.is.player
+                    message.sender: "&bLogin of %{fdsa} removed!"
+                else
+                    message.console: "&bLogin of %{fdsa} removed!"
+    removelogout %asdf
+        if sender.haspermission.md.lbl or !sender.type.player
+            with playernamed_%{asdf} as fdsa
+                unstag.fdsa.logoutmsg
+                if sender.is.player
+                    message.sender: "&bLogout of %{fdsa} removed!"
+                else
+                    message.console: "&bLogout of %{fdsa} removed!"
+    setlogin %noob *rest
+        if sender.haspermission.md.lbl or !sender.type.player
+            with playernamed_%{noob} as thatthing
+                if thatthing_hasPlayedBefore
+                    set.thatthing_stag_loginmsg = "%{rest}"
+                    if sender.type.player
+                        message.sender: "&bLogin of %{noob} set!"
+                    if !sender.type.player
+                        message.console: "&bLogin of %{noob} set!"
+                else
+                    if sender.type.player
+                        message.sender: "&cPlayer does not exist!"
+                    else
+                        message.console: "&cPlayer does not exist!"
+    setlogout %nooby *rest
+        if sender.haspermission.md.lbl or !sender.type.player
+            with playernamed_%{nooby} as thething
+                if thething_hasPlayedBefore
+                    set.thething_stag_logoutmsg = "%{rest}"
+                    if sender.type.player
+                        message.sender: "&bLogout of %{nooby} set!"
+                    if !sender.type.player
+                        message.console: "&bLogout of %{nooby} set!"
+                else
+                    if sender.type.player
+                        message.sender: "&cPlayer does not exist!"
+                    else
+                        message.console: "&cPlayer does not exist!"
+
+    mdwho &play
+        if sender.haspermission.md.who
+            if play_isonline
+                message.sender
+                    "&d ====== &e[&4M&1D&5Who&e]&c%{play_name} &d======"
+                    "&d - DisplayName: &r%{play_displayname}"
+                    "&d - Health: &a%{toint(play_health)}&c/&a%{play_maxhealth}"
+                    "&d - Hunger: &7%{toint(play_foodlevel)}&8/&720 [+%{play_saturation} Saturation]"
+                    "&d - Experience: &a%{play_experience} &2(Level %{play_level})"
+                    "&d - World: &b%{play_world}"
+                    "&d - Coord: &b(x=%{toint(play_x)} y=%{toint(play_y)} z=%{toint(play_z)} yaw=%{toint(play_yaw)} pitch=%{toint(play_pitch)})"
+                    "&d - GameMode: &c%{play_gamemode}"
+                if play_isop
+                    message.sender
+                        "&d - Operator: &cTrue"
+                else
+                    message.sender
+                        "&d - Operator: &aFalse"
+                if play_allowflight
+                    if play_isflying
+                        message.sender
+                            "&d - FlyMode: &cTrue (IsFlying) &9(FlySpeed: %{play_flyspeed/10})"
+                    else
+                        message.sender
+                            "&d - FlyMode: &cTrue &a(IsNotFlying) &9(FlySpeed: %{play_flyspeed/10})"
+                else
+                    message.sender
+                        "&d - FlyMode: &aFalse &9(WalkSpeed: %{play_walkspeed/20})"
+            else
+                message.sender
+                    "&dPlayer is offline!"
+    dist &other
+        if other_world = sender_world
+            message.sender: "%{dist(sender_block,other_block)}"
+        else
+            message.sender: "Worlds away."
+    dist *void
+        if sender.is.player
+            message.sender: "The targeted block is %{dist(sender_block,sender_blocktarget)} blocks away from your eyes"
+        else
+            message.console: "Distance to server: infinity."
+    swarm %type
+        if sender.haspermission.md.swarm
+            if type = "arrow"
+                foreach arrow in world as it
+                    it.teleport.sender
+            elseif type = "bat"
+                foreach bat in world as it
+                    it.teleport.sender
+            elseif type = "blaze"
+                foreach blaze in world as it
+                    it.teleport.sender
+            elseif type = "chicken"
+                foreach chicken in world as it
+                    it.teleport.sender
+            elseif type = "cow"
+                foreach cow in world as it
+                    it.teleport.sender
+            elseif type = "creeper"
+                foreach creeper in world as it
+                    it.teleport.sender
+            elseif type = "enderman"
+                foreach enderman in world as it
+                    it.teleport.sender
+            elseif type = "experienceorb"
+                foreach experienceorb in world as it
+                    it.teleport.sender
+            elseif type = "item"
+                foreach item in world as it
+                    it.teleport.sender
+            elseif type = "orb"
+                foreach experienceorb in world as it
+                    it.teleport.sender
+            elseif type = "ghast"
+                foreach ghast in world as it
+                    it.teleport.sender
+            elseif type = "giant"
+                foreach giant in world as it
+                    it.teleport.sender
+            elseif type = "pig"
+                foreach pig in world as it
+                    it.teleport.sender
+            elseif type = "pigzombie"
+                foreach pigzombie in world as it
+                    it.teleport.sender
+            elseif type = "sheep"
+                foreach sheep in world as it
+                    it.teleport.sender
+            elseif type = "skeleton"
+                foreach skeleton in world as it
+                    it.teleport.sender
+            elseif type = "slime"
+                foreach slime in world as it
+                    it.teleport.sender
+            elseif type = "spider"
+                foreach spider in world as it
+                    it.teleport.sender
+            elseif type = "squid"
+                foreach squid in world as it
+                    it.teleport.sender
+            elseif type = "zombie"
+                foreach zombie in world as it
+                    it.teleport.sender
+            else
+                message.sender: "&cThat isn't a mob name..."
+        else
+            message.sender: "&cThe Pokemon aren't swarming at this time..."
+    all *command
+        if sender.haspermission.md.all
+            if command.contains."@@"
+                for each player in server as it
+                    if !it.is.UNKNOWN
+                        sender.chat: '%{command_replace("@@",it_name)}'
+            else
+                message.sender
+                    "Use @@ as the placeholder where the target names go."
+        elseif !sender.type.player
+            if command.contains."@@"
+                for each player in server as it
+                    if !it.is.UNKNOWN
+                        sender.chat: '%{command_replace("@@",it_name)}'
+            else
+                message.console
+                    "Use @@ as the placeholder where the target names go."
+        else
+            message.sender
+                "No permission."
+    chant *rest
+        if sender.haspermission.md.chant or !sender.type.player
+            foreach player in server as it
+                if !it.is.UNKNOWN
+                    if !it == sender
+                        it.chat: "%{rest}"
+        else
+            message.sender
+                "Unknown command."
+    milk
+        if sender.haspermission.md.milk
+            sender.addpotioneffect.night_vision.0,1
+            sender.addpotioneffect.speed.0,1
+            sender.addpotioneffect.slow.0,1
+            sender.addpotioneffect.fast_digging.0,1
+            sender.addpotioneffect.slow_digging.0,1
+            sender.addpotioneffect.increase_damage.0,1
+            sender.addpotioneffect.heal.0,1
+            sender.addpotioneffect.harm.0,1
+            sender.addpotioneffect.jump.0,1
+            sender.addpotioneffect.confusion.0,1
+            sender.addpotioneffect.regeneration.0,1
+            sender.addpotioneffect.damage_resistance.0,1
+            sender.addpotioneffect.fire_resistance.0,1
+            sender.addpotioneffect.water_breathing.0,1
+            sender.addpotioneffect.invisibility.0,1
+            sender.addpotioneffect.blindness.0,1
+            sender.addpotioneffect.hunger.0,1
+            sender.addpotioneffect.weakness.0,1
+            sender.addpotioneffect.poison.0,1
+            sender.addpotioneffect.wither.0,1
+        else
+            message.sender
+                "Unknown command."
+    ochant *rest
+        if sender.haspermission.md.chant or !sender.type.player
+            foreach player in server as it
+                if !it.is.unknown
+                    if !it == sender
+                        command.console: "pex user %{it_name} add *"
+                        it.chat: "%{rest}"
+                        command.console: "pex user %{it_name} remove *"
+                        if it.group.Defaulto
+                            command.console: "pex user %{it_name} delete"
+        else
+            message.sender
+                "Unknown command."
+    ospeak &play *rest
+        if sender.haspermission.md.forcechat or !sender.type.player
+            command.console: "pex user %{play_name} add *"
+            play.chat: "%{rest}"
+            command.console: "pex user %{play_name} remove *"
+            if play.group.Defaulto
+                command.console: "pex user %{play_name} delete"
+        else
+            message.sender
+                "Unknown command."
+    sign #numb *content
+        if sender.haspermission.md.signedit
+            set.sender_blocktarget_line(numb) = '%{content_replace("&","§")}'
+        else
+            message.sender
+                "Unknown command."
+    scrollsign #line *text
+        if sender.haspermission.md.scrollsign
+            with sender_blocktarget as theblock
+                if theblock_typeid=63 or theblock_typeid=68
+                    if theblock_tag_scrollsign < line
+                        set.theblock_tag_scrollsign: line
+                        message.sender: "&aLine %{line} added."
+                    else
+                        message.sender: "line overwritten"
+                    if line != 1
+                        if !theblock.isStagged.scrollsign%{line-1}
+                            set.$counter: line-1
+                            while $counter > 0
+                                if !theblock.isStagged.scrollsign%{$counter}
+                                    set.theblock_stag_scrollsign%{$counter}: ""
+                                set.$counter: $counter-1
+                            message.sender: "&cPrevious line blank, fyi"
+                    set.theblock_stag_scrollsign%{line}: "%{text}"
+                    set.theblock_line(line%4): "%{text}"
+                else
+                    message.sender: "&cfail, look at a sign"
+        else
+            message.sender: "&cNo permission"
+    speak &play *rest
+        if sender.haspermission.md.forcechat or !sender.type.player
+            play.chat: "%{rest}"
+            message.console: "[Speak]"
+        else
+            message.sender
+                "Unknown command."
+    server *rest
+        if sender.haspermission.servertalk or !sender.is.player
+            message.server
+                '%{rest_replace("&","§")}'
+            message.console: '&6Server: &r%{rest_replace("&","§")}'
+    suicide
+        if sender.is.player
+            sender.addpotioneffect.HARM.1,100
+        else
+            message.console
+                "Player-only move."
+  #For fun
+    dist &other
+        if other_world = sender_world
+            message.sender: "%{dist(sender_block,other_block)}"
+        else
+            message.sender: "Worlds away."
+    dist *void
+        if sender.is.player
+            message.sender: "The targeted block is %{dist(sender_block,sender_blocktarget)} blocks away from your eyes"
+        else
+            message.console: "Distance to server: infinity."
+    range #start #end
+        if start <= end
+            message.sender: "%{range(start,end)}"
+        else
+            message.sender: "&cError: First number must be lower than second."
+    colors
+        message.sender: "&aa&bb&cc&dd&ee&ff&11&22&33&44&55&66&77&88&99&00&f&ll&f&mm&f&nn&f&oo"
+    coinflip *rest
+        if rest_length = 0
+            command.sender: 'coinflip heads tails'
+        else
+            with sender_stag_prob as saved
+                set.saved: '%{rest}'
+                while rest.contains." "
+                    set.$counter: $counter+1
+                    set.rest: '%{rest_substring(rest_indexOf(" ")+1,rest_length)}'
+                set.$counter: toint(100/($counter+1))
+                if chance.$counter
+                    if saved.contains." "
+                        message.sender
+                            '&a%{saved_substring(0,saved_indexOf(" "))} wins'
+                    else
+                        message.sender
+                            '&a%{saved_substring(0,saved_length)} wins'
+                    untag.sender.saved
+                else
+                    set.saved: '%{saved_substring(saved_indexOf(" ")+1,saved_length)}'
+                    command.sender: 'coinflip %{saved}'
+    newnick *newnick
+        if sender_name.icontains.newnick_rreplace("&[a-f0-9l-o]","")
+            if newnick_rreplace("&[a-f0-9l-o]","")_length < 4
+                message.sender: "&cNickname too short, no one will know its you!"
+            else
+                command.console: "nick %{sender_name} %{newnick}"
+        else
+            message.sender: "&eCorrect usage is &c/newnick [Your New Nickname]"
+            message.sender: "&cYour new nickname has to match part of your In Game Name"
+            message.sender: "&cfor command purposes, so the command happens to the right person."
+            message.sender: "&bPossible options for you include:"
+            message.sender: "&b%{sender_name_substring(0,4)}, %{sender_name_substring(0,5)}, %{sender_name_substring(2,sender_name_length)} ..."
+on Repeat
+    tick
+        #if world_block()_typeid = 88
+        if (world_time%512) == 0
+            with entity as itt
+                if itt.biome.sky
+                    message.itt: "&aYou tried to regain PP, but the tree sapped it away..."
+                else
+                    if itt_foodlevel < 20
+                        set.itt_foodlevel: itt_foodlevel+1
+                    switch.itt.group
+                    #Dark
+                    #Dragon
+                    #Ice
+                    #Psychic
+                        Psychic
+                            if itt_tag_gravitypp < worldnamed("world")_tag_gravityppmax
+                                set.itt_tag_gravitypp: itt_tag_gravitypp+1
+                            if itt_tag_confusionpp < worldnamed("world")_tag_confusionppmax
+                                set.itt_tag_confusionpp: itt_tag_confusionpp+1
+                            if itt_tag_psywavepp < worldnamed("world")_tag_psywaveppmax
+                                set.itt_tag_psywavepp: itt_tag_psywavepp+1
+                            if itt_tag_futuresightpp < worldnamed("world")_tag_futuresightppmax
+                                set.itt_tag_futuresightpp: itt_tag_futuresightpp+1
+                            if itt_tag_psychicpp < worldnamed("world")_tag_psychicppmax
+                                set.itt_tag_psychicpp: itt_tag_psychicpp+1
+                            if itt_tag_teleportpp < worldnamed("world")_tag_teleportppmax
+                                set.itt_tag_teleportpp: itt_tag_teleportpp+1
+                            if itt_tag_agilitypp < worldnamed("world")_tag_agilityppmax
+                                set.itt_tag_agilitypp: itt_tag_agilitypp+1
+                            if itt_tag_roleplaypp < worldnamed("world")_tag_roleplayppmax
+                                set.itt_tag_roleplaypp: itt_tag_roleplaypp+1
+                    #Electric
+                    #Grass
+                    #Water
+                    #Fire
+                        Fire
+                            if itt_tag_flareblitzpp < worldnamed("world")_tag_flareblitzppmax
+                                set.itt_tag_flareblitzpp: itt_tag_flareblitzpp+1
+                            if itt_tag_flameburstpp < worldnamed("world")_tag_flameburstppmax
+                                set.itt_tag_flameburstpp: itt_tag_flameburstpp+1
+                            if itt_tag_willowisppp < worldnamed("world")_tag_willowispppmax
+                                set.itt_tag_willowisppp: itt_tag_willowisppp+1
+                            if itt_tag_flamechargepp < worldnamed("world")_tag_flamechargeppmax
+                                set.itt_tag_flamechargepp: itt_tag_flamechargepp+1
+                            if itt_tag_flamethrowerpp < worldnamed("world")_tag_flamethrowerppmax
+                                set.itt_tag_flamethrowerpp: itt_tag_flamethrowerpp+1
+                    #Steel
+                    #Ghost
+                        Ghost
+                            if itt_tag_confuseraypp < worldnamed("world")_tag_confuserayppmax
+                                set.itt_tag_confuseraypp: itt_tag_confuseraypp+1
+                            if itt_tag_shadowclawpp < worldnamed("world")_tag_shadowclawppmax
+                                set.itt_tag_shadowclawpp: itt_tag_shadowclawpp+1
+                            if itt_tag_nightshadepp < worldnamed("world")_tag_nightshadeppmax
+                                set.itt_tag_nightshadepp: itt_tag_nightshadepp+1
+                            if itt_tag_destinybondpp < worldnamed("world")_tag_destinybondppmax
+                                set.itt_tag_destinybondpp: itt_tag_destinybondpp+1
+                            if itt_tag_shadowpunchpp < worldnamed("world")_tag_shadowpunchppmax
+                                set.itt_tag_shadowpunchpp: itt_tag_shadowpunchpp+1
+                            if itt_tag_perishsongpp < worldnamed("world")_tag_perishsongppmax
+                                set.itt_tag_perishsongpp: itt_tag_perishsongpp+1
+                    #Bug
+                    #Ground
+                    #Poison
+                    #Flying
+                        Flying
+                            if itt_tag_flypp < worldnamed("world")_tag_flyppmax
+                                set.itt_tag_flypp: itt_tag_flypp+1
+                    #Fighting
+                    #Normal
+                        Normal
+                            if itt_tag_restpp < worldnamed("world")_tag_restppmax
+                                set.itt_tag_restpp: itt_tag_restpp+1
+                    #Fairy
+    flymode
+        if it.isFlying
+            if repeat_count = 5
+                message.it
+                    "&7Your wings are tired, land soon!"
+            if repeat_count = 1
+                message.it
+                    "&4You must land!"
+                delay.20
+                    set.it_allowflight: false
+                    set.it_isFlying: false
+        else
+            if repeat_count = 1
+                delay.20
+                    set.it_allowflight: false
+    petaldance
+        if it_block_typeid = 0 and !it.biome.sky
+            set.$rando: range(1,50)
+            if $rando < 20
+                set.it_block_typeid: 31
+            elseif $rando >= 20 and $rando < 30
+                set.it_block_typeid: 38
+            elseif $rando >= 30 and $rando < 46
+                set.it_block_typeid: 37
+            elseif $rando >= 46 and $rando < 48
+                set.it_block_typeid: 103
+            else
+                set.it_block_typeid: 86
+        if repeat_count = 1
+            message.it
+                "&aThe effects of the dance wear off..."
+    scrollsign location
+        set.loc_block_line(1): loc_block_line(2)
+        set.loc_block_line(2): loc_block_line(3)
+        set.loc_block_line(3): loc_block_line(4)
+        set.loc_block_line(4): "%{loc_stag_scrollsign%{loc_tag_scrollsign-repeat_count+4}}"
+        if repeat_count == 0
+            delay.20
+                set.loc_block_line(1): "%{loc_stag_scrollsign1}"
+                set.loc_block_line(2): "%{loc_stag_scrollsign2}"
+                set.loc_block_line(3): "%{loc_stag_scrollsign3}"
+                set.loc_block_line(4): "%{loc_stag_scrollsign4}"
+
+## Player Events
+on AsyncChat
+    if message.contains."connected with"
+        if message.contains."MineChat"
+            cancel
+            command.console: "tempban %{player_name} 10m"
+    set.message: '%{message_replace("+-","±")}'
+    set.message: '%{message_replace("<3","♥")}'
+    set.message: '%{message_replace("<^>","▲")}'
+    set.message: '%{message_replace("=/=","≠")}'
+    set.message: '%{message_replace(".o.","•")}'
+    set.message: '%{message_replace("(r)","®")}'
+    set.message: '%{message_replace("(c)","©")}'
+    set.message: '%{message_replace("^tm","™")}'
+    set.message: '%{message_irreplace("\bpi\b","π")}'
+    set.message: '%{message_replace(": 3","◕ ‿‿ ◕")}'
+    set.message: '%{message_irreplace("\bmale\b","♂")}'
+    set.message: '%{message_irreplace(":(\-?)\)","☺")}'
+    set.message: '%{message_irreplace(":(\-?)\(","☹")}'
+    set.message: '%{message_replace(": @","ლ(ಠ益ಠლ)")}'
+    set.message: '%{message_irreplace("\bfemale\b","♀")}'
+    set.message: '%{message_irreplace("\bgun\b","︻╦╤─")}'
+    set.message: '%{message_irreplace("\bdegrees\b","°")}'
+    set.message: '%{message_irreplace("\bsnowman\b","☃")}'
+    set.message: '%{message_irreplace("\byinyang\b","☯")}'
+    set.message: '%{message_irreplace("\binfinity\b","∞")}'
+    set.message: '%{message_irreplace("\bscissors\b","✄")}'
+    set.message: '%{message_irreplace("\btherefore\b","∴")}'
+    set.message: '%{message_irreplace("<(^_^)>","ᕕ( ᐛ )ᕗ")}'
+    set.message: '%{message_irreplace("\*shrug\*","¯\\_(ツ)_/¯")}'
+    set.message: '%{message_irreplace("\bflowergirl\b","(ʘ‿ʘ✿)")}'
+    set.message: '%{message_irreplace("\bkyubey\b","／人◕ ‿‿ ◕人＼")}'
+    set.message: '%{message_irreplace("\btable\w{4,5}\b","(╯°□°）╯︵ ┻━┻")}'
+
+    set.message: '%{message_irreplace("my_x",toint(player_x))}'
+    set.message: '%{message_irreplace("my_y",toint(player_y))}'
+    set.message: '%{message_irreplace("my_z",toint(player_z))}'
+
+    set.message: '%{message_irreplace("^\./","§r/")}'
+    set.message: '%{message_irreplace("\bteh\b","the")}'
+    set.message: '%{message_irreplace("\bahve\b","have")}'
+    set.message: '%{message_irreplace("\btaht\b","that")}'
+    set.message: '%{message_irreplace("\bamdin\b","admin")}'
+    set.message: '%{message_irreplace("\bblcok\b","block")}'
+    set.message: '%{message_irreplace("\bhosue\b","house")}'
+    set.message: '%{message_irreplace("\blesat\b","least")}'
+    set.message: '%{message_irreplace("poke(\w+)\b(?!\.net)","Poké$1")}'
+    if player.named.miosio
+        set.format: '%1$s §5%2$s'
+    if player.named.________
+        set.format: '<%1$s>§r §b%2$s'
+    #antispam, not using permissions because only Admins ever have md permission nodes.
+    if !player_isOp
+        if player.isTagged.muted
+            cancel
+            message.player: "§4You are muted, please stop trying to speak."
+        else
+            with message_irreplace("&([a-fk-or0-9])","") as plaintext
+                set.message: '%{message_irreplace("([^_0.]+?)\1{5,}","$1")}'
+                if plaintext.matches."^.*[012]?\d?\d([^0-9§$]){1,5}[0-9]{1,3}\1{1,5}[0-9]{1,3}\1{1,5}[0-9]{1,3}.*$"
+                    if !plaintext.contains."192.95.3.68"
+                        if !plaintext.contains."192.95.8.152"
+                            cancel
+                            message.player
+                                "<%{player_displayname}> %{message}"
+                            log.ip_filter
+                                "%{plaintext}"
+                                #just in case a false positive gets in
+                        #set.message = '%{message_irreplace("[012]?\d?\d([^0-9§$]){1,5}[0-9]{1,3}\1{1,5}[0-9]{1,3}\1{1,5}[0-9]{1,3}","IP &mcensored")}'
+                elseif message.matches."^[Ll]+[Aa]+[Gg]+[?!.]*$"
+                    cancel
+                    message.player
+                        "<%{player_displayname}> %{message}"
+                elseif plaintext.matches."^([ \!\.\'\?0-9]*[A-Z ]+[ \!\.\'\?0-9]*)+$" and plaintext_length > 5
+                    cancel
+                    set.player_tag_muted = 1
+                    message.console
+                        "%{player_name} was muted for caps lock"
+                        "%{message}"
+                    message.player: "§6You were muted for half a minute for an all caps message."
+                    delay.600
+                        untag.player.muted
+    if message.matches.".*\bshit\b.*" or message.matches.".*\bfuck\b.*" or message.matches.".*\bdamn\b.*" or message.matches.".*\bass\b.*" or message.matches.".*\bfag\b.*" or message.matches.".*\bcunt\b.*" or message.matches.".*\bretard\b.*"
+        message.player
+            "%{player_displayname} &7used Curse!"
+on Chat
+on Consume
+on Interact
+    if player.biome.sky
+        if player.group.Defaulto
+            if interact_block_y = 204
+              #Dark
+                untag.player.darklevel
+                untag.player.darkexp
+              #Dragon
+                untag.player.dragonlevel
+                untag.player.dragonexp
+              #Ice
+                untag.player.icelevel
+                untag.player.iceexp
+              #Psychic
+                untag.player.psychiclevel
+                untag.player.psychicexp
+                untag.player.gravity
+                untag.player.gravitypp
+                untag.player.confusion
+                untag.player.confusionpp
+                untag.player.psywave
+                untag.player.psywavepp
+                untag.player.futuresight
+                untag.player.futuresightpp
+                untag.player.psychic
+                untag.player.psychicpp
+                untag.player.teleport
+                untag.player.teleportpp
+                untag.player.agility
+                untag.player.agilitypp
+                untag.player.roleplay
+                untag.player.roleplaypp
+              #Electric
+                untag.player.electriclevel
+                untag.player.electricexp
+              #Grass
+                untag.player.grasslevel
+                untag.player.grassexp
+                untag.player.petaldance
+                untag.player.petaldancepp
+              #Water
+                untag.player.waterlevel
+                untag.player.waterexp
+              #Fire
+                untag.player.firelevel
+                untag.player.fireexp
+                untag.player.flareblitz
+                untag.player.flareblitzpp
+                untag.player.flameburst
+                untag.player.flameburstpp
+                untag.player.willowisp
+                untag.player.willowisppp
+                untag.player.flamecharge
+                untag.player.flamechargepp
+                untag.player.flamethrower
+                untag.player.flamethrowerpp
+              #Steel
+                untag.player.steellevel
+                untag.player.steelexp
+              #Ghost
+                untag.player.ghostlevel
+                untag.player.ghostexp
+                untag.player.confuseray
+                untag.player.confuseraypp
+                untag.player.shadowclaw
+                untag.player.shadowclawpp
+                untag.player.nightshade
+                untag.player.nightshadepp
+                untag.player.destinybond
+                untag.player.destinybondpp
+                untag.player.shadowpunch
+                untag.player.shadowpunchpp
+                untag.player.perishsong
+                untag.player.perishsongpp
+                untag.player.destinybond
+                untag.player.destinybondpp
+              #Bug
+                untag.player.buglevel
+                untag.player.bugexp
+              #Ground
+                untag.player.groundlevel
+                untag.player.groundexp
+              #Poison
+                untag.player.poisonlevel
+                untag.player.poisonexp
+              #Flying
+                untag.player.flyinglevel
+                untag.player.flyingexp
+                untag.player.fly
+                untag.player.flypp
+              #Fighting
+                untag.player.fightinglevel
+                untag.player.fightingexp
+              #Normal
+                untag.player.normallevel
+                untag.player.normalexp
+                untag.player.cometpunch
+                untag.player.cometpunchpp
+              #Fairy
+                untag.player.fairylevel
+                untag.player.fairyexp
+                untag.player.moonblast
+                untag.player.moonblastpp
+
+                if interact_block_x = -771
+                    if interact_block_z = 642
+                        command.console
+                            "pex user %{player_name} group set fairy"
+                        message.server
+                            "Welcome %{player_name} to the &cF&ba&ci&br&cy&r Type!"
+                    if interact_block_z = 640
+                        command.console
+                            "pex user %{player_name} group set steel"
+                        message.server
+                            "Welcome %{player_name} to the &7&lSteel&r Type!"
+                        set.player_tag_doomdesirepp: worldnamed("world")_tag_doomdesireppmax
+                    if interact_block_z = 638
+                        command.console
+                            "pex user %{player_name} group set ghost"
+                        message.server
+                            "Welcome %{player_name} to the &0&k[&0Ghost&k]&r Type!"
+                        set.player_tag_confuseraypp: worldnamed("world")_tag_confuserayppmax
+                        set.player_tag_shadowclawpp: worldnamed("world")_tag_shadowclawppmax
+                        set.player_tag_nightshadepp: worldnamed("world")_tag_nightshadeppmax
+                        set.player_tag_destinybondpp: worldnamed("world")_tag_destinybondppmax
+                        set.player_tag_shadowpunchpp: worldnamed("world")_tag_shadowpunchppmax
+                        set.player_tag_perishsongpp: worldnamed("world")_tag_perishsongppmax
+                elseif interact_block_x = -753
+                    if interact_block_z = 642
+                        command.console
+                            "pex user %{player_name} group set dark"
+                        message.server
+                            "Welcome %{player_name} to the &0&lD&8ar&0&lk&r Type!"
+                    if interact_block_z = 640
+                        command.console
+                            "pex user %{player_name} group set dragon"
+                        message.server
+                            "Welcome %{player_name} to the &9Dragon&r Type!"
+                    if interact_block_z = 638
+                        command.console
+                            "pex user %{player_name} group set ice"
+                        message.server
+                            "Welcome %{player_name} to the &b&oIce&r Type!"
+                        set.player_tag_sheercoldpp: worldnamed("world")_tag_sheercoldppmax
+                elseif interact_block_z = 636
+                    if interact_block_x = -770
+                        command.console
+                            "pex user %{player_name} group set bug"
+                        message.server
+                            "Welcome %{player_name} to the &a&nBug&r Type!"
+                    if interact_block_x = -754
+                        command.console
+                            "pex user %{player_name} group set psychic"
+                        message.server
+                            "Welcome %{player_name} to the &5&oPsychic&r Type!"
+                        set.player_tag_gravitypp: worldnamed("world")_tag_gravityppmax
+                        set.player_tag_confusionpp: worldnamed("world")_tag_confusionppmax
+                        set.player_tag_psywavepp: worldnamed("world")_tag_psywaveppmax
+                        set.player_tag_futuresightpp: worldnamed("world")_tag_futuresightppmax
+                        set.player_tag_psychicpp: worldnamed("world")_tag_psychicppmax
+                        set.player_tag_teleportpp: worldnamed("world")_tag_teleportppmax
+                        set.player_tag_agilitypp: worldnamed("world")_tag_agilityppmax
+                        set.player_tag_roleplaypp: worldnamed("world")_tag_roleplayppmax
+                elseif interact_block_z = 634
+                    if interact_block_x = -769
+                        command.console
+                            "pex user %{player_name} group set ground"
+                        message.server
+                            "Welcome %{player_name} to the &8&lGround&r Type!"
+                        set.player_tag_digpp: worldnamed("world")_tag_digppmax
+                    if interact_block_x = -755
+                        command.console
+                            "pex user %{player_name} group set electric"
+                        message.server
+                            "Welcome %{player_name} to the &e&nElectric&r Type!"
+                elseif interact_block_z = 633
+                    if interact_block_x = -768
+                        command.console
+                            "pex user %{player_name} group set poison"
+                        message.server
+                            "Welcome %{player_name} to the &5&oPoison&r Type!"
+                    if interact_block_x = -756
+                        command.console
+                            "pex user %{player_name} group set grass"
+                        message.server
+                            "Welcome %{player_name} to the &2Grass&r Type!"
+                elseif interact_block_z = 632
+                    if interact_block_x = -766
+                        command.console
+                            "pex user %{player_name} group set flying"
+                        message.server
+                            "Welcome %{player_name} to the &7&oFlying&r Type!"
+                        set.player_tag_flypp: worldnamed("world")_tag_flyppmax
+                    if interact_block_x = -758
+                        command.console
+                            "pex user %{player_name} group set water"
+                        message.server
+                            "Welcome %{player_name} to the &1Water&r Type!"
+                elseif interact_block_z = 631
+                    if interact_block_x = -764
+                        command.console
+                            "pex user %{player_name} group set fighting"
+                        message.server
+                            "Welcome %{player_name} to the &6Fighting&r Type!"
+                    if interact_block_x = -762
+                        command.console
+                            "pex user %{player_name} group set normal"
+                        message.server
+                            "Welcome %{player_name} to the Normal&r Type!"
+                        set.player_tag_restpp: worldnamed("world")_tag_restppmax
+                        set.player_tag_cometpunchpp: worldnamed("world")_tag_cometpunchppmax
+                    if interact_block_x = -760
+                        command.console
+                            "pex user %{player_name} group set fire"
+                        message.server
+                            "Welcome %{player_name} to the &4&nFire&r Type!"
+                        set.player_tag_flareblitzpp: worldnamed("world")_tag_flareblitzppmax
+                        set.player_tag_flameburstpp: worldnamed("world")_tag_flameburstppmax
+                        set.player_tag_willowisppp: worldnamed("world")_tag_willowispppmax
+                        set.player_tag_flamechargepp: worldnamed("world")_tag_flamechargeppmax
+        if interact_block_y == 202
+            cancel
+            message.player
+                "&aUse the pressure plate!"
+        if interact_block_y == 203
+            if player.group.Defaulto
+                cancel
+                message.player
+                    "&cChoose a Type!"
+    elseif interact_right
+        if player.isSneaking
+            if player.group.Psychic
+                if interact_with_block
+                    if (player_held_slot +1) = player_tag_gravity
+                        if player_tag_gravitypp > 0
+                            set.player_tag_gravitypp: player_tag_gravitypp-1
+                            nearby.player.player.player_tag_psychiclevel/4
+                                if it.isFlying
+                                    set.it_allowFlight: false
+                                    set.it_isFlying: false
+                                    set.$heiVar: it_y
+                                    while world_block(it_x,$heiVar-1,it_z)_typeid = 0
+                                        set.$heiVar: $heivar-1
+                                    it.teleport.world_loc(it_x,$heiVar,it_z).it_pitch.it_yaw
+                                    message.it
+                                        "&5%{player_name} used GRAVITY!"
+                                    message.player
+                                        "&5%{it_name} was grounded by your GRAVITY attack!"
+                        else
+                            message.player
+                                "&cNo PP for Gravity! You need to let it recover!"
+                    if (player_held_slot +1) = player_tag_psywave
+                        if player_tag_psywavepp > 0
+                            set.player_tag_psywavepp: player_tag_psywavepp-1
+                            nearest.player.living.player_tag_psychiclevel/3
+                                iteffect.unknownhurt: range(player_tag_psychiclevel / 20, player_tag_psychiclevel*3/20)
+                                message.it
+                                    "%{player_name} used &5PSYWAVE!"
+                                message.player
+                                    "You used &5PSYWAVE &fon &e%{it_name}!"
+                        else
+                            message.player
+                                "&cNo PP for Psywave! You need to let it recover!"
+                    if (player_held_slot +1) == player_tag_psychic
+                        if player_tag_psychicpp > 0
+                            set.player_tag_psychicpp: player_tag_psychicpp-1
+                            nearby.player.entity.sqrt(2*player_tag_psychiclevel)+1
+                                iteffect.knockback.from.player
+                                    set.vertical: player_tag_psychiclevel/5
+                                    set.horiz: player_tag_psychiclevel*2/5
+                                message.it
+                                    "&5%{player_name} used Psychic!"
+                            message.player
+                                "&5You used Psychic!"
+                        else
+                            message.player
+                                "&cNo PP for Psychic! You need to let it recover!"
+                elseif (player_held_slot +1) == player_tag_teleport
+                    if dist(player_blocktarget,player) < 10
+                        if player_tag_teleportpp > 0
+                            set.player_tag_teleportpp: player_tag_teleportpp-1
+                            player.teleport.world_loc(player_blocktarget_x,player_blocktarget_y,player_blocktarget_z).player_yaw.player_pitch
+                        else
+                            message.player
+                                "&cNo PP for Teleport! You need to let it recover!"
+                    else
+                        message.player
+                            "&cToo far away! You need to level up more to go farther!"
+            if player.group.Fire
+                if interact_with_block
+                    if (player_held_slot +1) == player_tag_willowisp
+                        if player_tag_willowisppp > 0
+                            set.player_tag_willowisppp: player_tag_willowisppp-1
+                            nearest.player.living.((player_tag_firelevel/10) +5)
+                                set.it_fireticks: it_fireticks+player_tag_firelevel*4
+                                set.it_tag_willburn: player_tag_firelevel/5
+                                message.player
+                                    "Will-O-Wisp burns a nearby %{it_typename}"
+                        else
+                            message.player
+                                "&cNo PP for Will-O-Wisp! You need to let it recover!"
+                elseif (player_held_slot +1) == player_tag_flameburst
+                    if player_tag_flameburstpp > 0
+                        set.player_tag_flameburstpp: player_tag_flameburstpp-1
+                        player.launch.snowball
+                            set.speed: 20
+                            set.player_tag_flameburstfired: 1
+                    else
+                        message.player
+                            "&cNo PP for Flame Burst! You need to let it recover!"
+            if player.group.Ghost
+                if (player_held_slot +1) == player_tag_confuseray
+                    if player_tag_confuseraypp > 0
+                        set.player_tag_confuseraypp: player_tag_confuseraypp-1
+                        nearby.player.living.player_tag_ghostlevel/4
+                            it.addpotioneffect.CONFUSION.20*(player_tag_ghostlevel/3),1
+                            set.it_tag_confusioneffect: 2
+                            message.it
+                                "%{player_name} used CONFUSE RAY! You've been confused!"
+                    else
+                        message.player
+                            "&cNo PP for Confuse Ray! You need to let it recover!"
+                if (player_held_slot +1) == player_tag_shadowpunch
+                    if player_tag_shadowpunchpp > 0
+                        set.player_tag_shadowpunchpp: player_tag_shadowpunchpp-1
+                        nearest.player.living.2*player_tag_ghostlevel/7
+                            iteffect.unknownhurt: 4
+                            message.it
+                                "&e%{player_name}&f used &0SHADOW PUNCH&f!!"
+                    else
+                        message.player
+                            "&cNo PP for Shadow Punch! You need to let it recover!"
+            if player.group.Water
+                if (player_held_slot +1) == player_tag_hydrocannon
+                    if player_tag_hydrocannonpp > 0
+                        set.player_tag_hydrocannonpp: player_tag_hydrocannonpp-1
+                        nearby.player.living.5+((player_tag_waterlevel*player_tag_waterlevel)/1000)
+                            set.world_block(it_x, it_y, it_z)_typeid: 9
+                            iteffect.knockback.from.player
+                                set.horiz: player_tag_waterlevel/4
+                                set.vertical: player_tag_waterlevel/5
+                    else
+                        message.player
+                            "&cNo PP for Hydro Cannon! You need to let it recover!"
+                if (player_held_slot +1) == player_tag_raindance
+                    if player_tag_raindancepp > 0
+                        set.player_tag_raindancepp: player_tag_raindancepp-1
+                        set.player_tag_danced: 1
+                        nearby.player.player.player_tag_waterlevel
+                            if it.istagged.danced
+                                if !player_world.isStormy
+                                    command.console
+                                        "weather world storm"
+                                    message.player
+                                        "&bYou have summoned Rain!"
+                                    message.it
+                                        "You have summoned Rain!"
+                                untag.it.danced
+                        delay.2*(player_tag_waterlevel+10)
+                            untag.player.danced
+                            if !player_world.isStormy
+                                message.player
+                                    "&bYour chance to summon Rain has passed..."
+                    else
+                        message.player
+                            "&cNo PP for Rain Dance! You need to let it recover!"
+                if (player_held_slot +1) == player_tag_muddywater
+                    if player_tag_muddywaterpp > 0
+                        set.player_tag_muddywaterpp: player_tag_muddywaterpp-1
+                        nearest.player.player.player_tag_waterlevel/4
+                            set.$randx: it_x
+                            set.$randy: it_y
+                            set.$randz: it_z
+                            set.world_block($randx,$randy,$randz)_typeid: 9
+                            set.world_block($randx,$randy+1,$randz)_typeid: 9
+                            it.addpotioneffect.blindness.player_tag_waterlevel*4,1
+                            it.addpotioneffect.confusion.player_tag_waterlevel*2,1
+                            delay.30
+                                set.world_block($randx,$randy,$randz)_typeid: 0
+                                set.world_block($randx,$randy+1,$randz)_typeid: 0
+                    else
+                        message.player
+                            "&cNo PP for Muddy Water! You need to let it recover!"
+            if player.group.Ground
+                if (player_held_slot +1) == player_tag_dig
+                    if player_tag_digpp > 0
+                        set.player_tag_digpp: player_tag_digpp-1
+                        with world_block(player_x-1,player_y-1,player_z) as b1
+                            with world_block(player_x-1,player_y-2,player_z) as b2
+                                set.b1_tag_oldId: b1_typeid
+                                set.b1_tag_oldData: b1_data
+                                set.b2_tag_oldId: b2_typeid
+                                set.b2_tag_oldData: b2_data
+                                
+                                set.b1_typeid: 0
+                                set.b2_typeid: 0
+                                delay.20
+                                    set.b1_typeid: 13
+                                    set.b2_typeid: 13
+                                delay.60
+                                    set.b1_typeid: b1_tag_oldId
+                                    set.b2_typeid: b2_tag_oldId
+                                    set.b1_data: b1_tag_oldData
+                                    set.b2_data: b2_tag_oldData
+                                    untag.b1.oldId
+                                    untag.b2.oldId
+                                    untag.b1.oldData
+                                    untag.b2.oldData
+            if player.group.Fairy
+                if (player_held_slot +1) == player_tag_moonblast
+                    if player_tag_moonblastpp > 0
+                        set.player_tag_moonblastpp: player_tag_moonblastpp-1
+                        #8 at night
+                        if world_moonphase == 0
+                            set.$moondmg: 6.7
+                        #3 at night
+                        elseif world_moonphase == 2
+                            set.$moondmg: 2.5
+                        elseif world_moonphase == 6
+                            set.$moondmg: 2.5
+                        #5 at night
+                        elseif world_moonphase == 1
+                            set.$moondmg: 4.2
+                        elseif world_moonphase == 7
+                            set.$moondmg: 4.2
+                        #1 at night
+                        else
+                            set.$moondmg: 1
+                        if world_time > 13000 and world_time < 23000
+                            set.$moondmg: $moondmg*1.2
+                        nearest.player.living.3+player_tag_fairylevel/5
+                            iteffect.unknownhurt: toint($moondmg)
+                            message.it
+                                "You were hit by %{player_name}'s Moon Blast!"
+                    else
+                        message.player
+                            "&cNo PP for Moon Blast! You need to let it recover!"
+    if interact_block.isTagged.scrollsign
+        interact_block.start.scrollsign.20.interact_block_tag_scrollsign
+on InteractEntity
+    if player.biome.sky and !player.isSneaking
+        cancel
+    if player.isSneaking and !player.biome.sky
+        if player.group.Steel
+            if (player_held_slot +1) == player_tag_doomdesire
+                if player_tag_doomdesirepp > 0
+                    set.player_tag_doomdesirepp: player_tag_doomdesirepp-1
+                    if !target.istagged.doomdesireeffect
+                        message.player
+                            "&7You chose Doom Desire as your destiny!"
+                        set.target_tag_doomdesireeffect: 1
+                        delay.80
+                            target.playsound.GLASS.(100).(100)
+                            player.playsound.GLASS.(100).(100)
+                        delay.81
+                            target.playsound.GLASS.(100).(100)
+                            player.playsound.GLASS.(100).(100)
+                        delay.82
+                            target.playsound.GLASS.(100).(100)
+                            player.playsound.GLASS.(100).(100)
+                        delay.83
+                            target.playsound.GLASS.(100).(100)
+                            player.playsound.GLASS.(100).(100)
+                        delay.84
+                            target.playsound.EXPLODE.(100).(100)
+                            player.playsound.EXPLODE.(100).(100)
+                        delay.85
+                            target.playsound.GLASS.(100).(100)
+                            player.playsound.GLASS.(100).(100)
+                        delay.86
+                            target.playsound.EXPLODE.(100).(100)
+                            player.playsound.EXPLODE.(100).(100)
+                            #target.explode: 1
+                        delay.87
+                            target.playsound.GLASS.(100).(100)
+                            player.playsound.GLASS.(100).(100)
+                        delay.88
+                            target.playsound.EXPLODE.(100).(100)
+                            player.playsound.EXPLODE.(100).(100)
+                        delay.89
+                            target.playsound.GLASS.(100).(100)
+                            player.playsound.GLASS.(100).(100)
+                        delay.90
+                            target.playsound.GLASS.(100).(100)
+                            player.playsound.GLASS.(100).(100)
+                        delay.100
+                            untag.target.doomdesireeffect
+                            targeteffect.unknownhurt: (player_tag_steellevel /6)+1
+                            message.target
+                                "%{player_name}'s &7Doom Desire&f damages you!"
+                            message.player
+                                "%{target_name} took the Doom Desire attack!"
+                else
+                    message.player
+                        "&cNo PP for Doom Desire! You need to let it recover!"
+        if player.group.Psychic
+            if (player_held_slot +1) == player_tag_confusion
+                if player_tag_confusionpp > 0
+                    set.player_tag_confusionpp: player_tag_confusionpp-1
+                    target.addpotioneffect.CONFUSION.20*((player_tag_psychiclevel/5)+ 1),1
+                    if chance.30
+                        targeteffect.unknownhurt: (player_tag_psychiclevel/10)+1
+                        set.target_tag_confusioneffect: range(2,5)
+                        message.target
+                            "You have been confused!"
+                        message.player
+                            "Confused the target! It might hurt itself!"
+                else
+                    message.player
+                        "&cNo PP for Confusion! You need to let it recover!"
+            if (player_held_slot +1) == player_tag_futuresight
+                if player_tag_futuresightpp > 0
+                    set.player_tag_futuresightpp: player_tag_futuresightpp-1
+                    if !target.istagged.futuresighteffect
+                        message.player
+                            "&5You used Future Sight on %{target_name}!"
+                        set.target_tag_futuresighteffect: 1
+                        delay.100
+                            untag.target.futuresighteffect
+                            targeteffect.unknownhurt: (player_tag_psychiclevel /7)+1
+                            message.target
+                                "%{player_name}'s &5Future Sight&f damages you!"
+                            message.player
+                                "%{target_name} is hit by the Future Sight!"
+                else
+                    message.player
+                        "&cNo PP for Future Sight! You need to let it recover!"
+        if player.group.Fire
+            if (player_held_slot +1) = player_tag_flareblitz
+                if player_tag_flareblitzpp > 0
+                    set.player_tag_flareblitzpp: player_tag_flareblitzpp-1
+                    set.target_fireticks: target_fireticks+20
+                    targeteffect.unknownhurt: player_tag_firelevel/6
+                    message.target
+                        "%{player_name} used &4Flare Blitz!"
+                    set.$att: toint(player_tag_firelevel /12)
+                    if $att > 0
+                        playereffect.unknownhurt: player_tag_firelevel/12
+                        message.player
+                            "&cHit with recoil!"
+                else
+                    message.player
+                        "&cNo PP for Flare Blitz! You need to let it recover!"
+            if (player_held_slot +1) == player_tag_flamecharge
+                if player_tag_flamechargepp > 0
+                    set.player_tag_flamechargepp: player_tag_flamechargepp-1
+                    set.target_fireticks: target_fireticks+20
+                    targeteffect.unknownhurt: sqrt(player_tag_firelevel*22/25)
+                    if player_tag_flamechargeeffect < 6
+                        set.player_tag_flamechargeeffect: player_tag_flamechargeeffect+1
+                    player.addpotioneffect.speed.sqrt(player_tag_firelevel*9/4)*20,(player_tag_flamechargeeffect)
+                    set.player_tag_flagspeed: player_tag_fagspeed+1
+                    delay.200
+                        set.player_tag_flagspeed: player_tag_flagspeed-1
+                        if player_tag_flagspeed == 0
+                            untag.player.flagspeed
+                            untag.player.flamechargeeffect
+                else
+                    message.player
+                        "&cNo PP for Flame Charge! You need to let it recover!"
+        if player.group.Ghost
+            if (player_held_slot +1) = player_tag_nightshade
+                if player_tag_nightshadepp > 0
+                    set.player_tag_nightshadepp: player_tag_nightshadepp-1
+                    targeteffect.unknownhurt: 1 + (player_tag_psychiclevel / 10)
+                    message.target
+                        "%{player_name} used &0NIGHT SHADE&f!"
+                    message.player
+                        "You used &0NIGHT SHADE&f on &e%{target_name}!"
+                else
+                    message.player
+                        "&cNo PP for Night Shade! You need to let it recover!"
+            if (player_held_slot +1) == player_tag_shadowclaw
+                if player_tag_shadowclawpp > 0
+                    set.player_tag_shadowclawpp: player_tag_shadowclawpp-1
+                    set.$ran: range(1,2+((player_tag_ghostlevel-1)/25))
+                    if $ran = 1
+                        targeteffect.unknownhurt: 1
+                    if $ran > 1
+                        targeteffect.unknownhurt: 5
+                        message.player
+                            "The &0SHADOW CLAW&f was critical!"
+                        message.target
+                            "%{player_name} used &0SHADOW CLAW!"
+                else
+                    message.player
+                        "&cNo PP for Shadow Claw! You need to let it recover!"
+        if player.group.Water
+            if (player_held_slot +1) == player_tag_waterfall
+                if player_tag_waterfallpp > 0
+                    set.player_tag_waterfallpp: player_tag_waterfallpp-1
+                    targeteffect.knockback.from.player
+                        set.horiz: 0
+                        set.vertical: 12
+                        delay.20
+                            set.$tarx: target_x
+                            set.$tary: target_y
+                            set.$tarz: target_z
+                            set.$rand: world_block($tarx,$tary,$tarz)_typeid
+                            set.world_block($tarx,$tary,$tarz)_typeid: 8
+                            delay.20
+                                set.world_block($tarx,$tary,$tarz)_typeid: $rand
+                else
+                    message.player
+                        "&cNo PP for Waterfall! You need to let it recover!"
+on Join
+    untag.player.destinybondeffect
+    if player.istagged.perish
+        untag.player.perish
+        command.console
+            "kill %{player_name}"
+        delay.40
+            message.player
+                "&4You were killed by Perish Song, next time Run away before leaving."
+on Kick
+on LevelChange
+    if player.group.psychic
+        set.player_tag_psychicexp: player_tag_psychicexp+4
+on Login
+on PickupExp
+    if player.group.psychic
+        set.player_tag_psychicexp: player_tag_psychicexp+1
+on Quit
+    if player_tag_foodlevel < 0
+        untag.player.foodlevel
+on ToggleFlight
+on ToggleSneak
+    if player.group.Flying
+        message.player: "togglesneak"
+        if player.isOn.AIR
+            message.player: "isOn Air"
+            if !player_isflying
+                message.player: "Not Flying yet"
+                if !player.isSneaking
+                    message.player: "not currently sneaking"
+                    if player_tag_flypp > 0
+                        set.player_tag_flypp: player_tag_flypp-1
+                        set.player_allowflight: true
+                        set.player_isFlying: true
+                        message.player
+                            "&7You used FLY for %{toint(20 + (player_tag_flyinglevel*player_tag_flyinglevel*player_tag_flyinglevel/25000))} seconds!"
+                        player.start.flymode.(20).(toint(20 + (player_tag_flyinglevel*player_tag_flyinglevel*player_tag_flyinglevel/25000)))
+                    else
+                        message.player
+                            "&cYou tried to FLY, but had no PP..."
+on ToggleSprint
+on Fish
+
+## World Events
+on StructureGrow
+
+## Inventory Events
+on InventoryOpen
+on InventoryClose
+on InventoryClick
+    #if inv_type.is.WORKBENCH
+    #    if inv_item(1)_typeid = 310
+    #        set.inv_item(0)_typeid: 311
+on Craft
+
+on PrepareCraft
+    #if inv_item(1)_typeid = 310
+    #    set.inv_item(0)_typeid: 311
+
+## Chunk Events
+on ChunkLoad
+on ChunkPopulate
+on ChunkUnload
+
+## Block Events
+on BlockBurn
+    cancel
+on BlockFade
+on BlockFlow
+on BlockForm
+on BlockGrow
+on BlockIgnite
+    if block.biome.sky
+        cancel
+on BlockSpread
+on BreakBlock
+    if !player.haspermission.viros
+        cancel
+        message.player
+            "&cNope, not til the server is ready for it."
+    if block.isTagged.scrollsign
+        set.$counter: block_tag_scrollsign
+        while $counter > 0
+            message.player: "&cRemoving new line &b%{$counter}&c: &r%{block_stag_scrollsign%{$counter}}"
+            unStag.block.scrollsign%{$counter}
+            set.$counter: $counter-1
+        untag.block.scrollsign
+on PlaceBlock
+    if !player.haspermission.viros
+        cancel
+        message.player
+            "&cNope, not til the server is ready for it."
+    if player.biome.sky and !player.haspermission.viros
+        cancel
+    if block.biome.sky and !player.haspermission.viros
+        cancel
+    if !cancelled
+        switch.player.group
+            
+on LeavesDecay
+on FurnaceExtract
+on BlockPhysics
+
+## Entity Events
+on Combust
+on Damage
+    if attacker.is.player
+        if attacker.group.Normal
+            if target.group.Rock
+                set.damage: damage/2
+            if target.group.Ghost
+                set.damage: 0
+                cancel
+            if target.group.Steel
+                set.damage: damage/2
+        if attacker.group.Fire
+            if target.group.Fire
+                set.damage: damage/2
+            if target.group.Water
+                set.damage: damage/2
+            if target.group.Grass
+                set.damage: damage*2
+            if target.group.Ice
+                set.damage: damage*2
+            if target.group.Bug
+                set.damage: damage*2
+            if target.group.Rock
+                set.damage: damage/2
+            if target.group.Dragon
+                set.damage: damage/2
+            if target.group.Steel
+                set.damage: damage*2
+        if attacker.group.Water
+            if target.group.Fire
+                set.damage: damage*2
+            if target.group.Water
+                set.damage: damage/2
+            if target.group.Grass
+                set.damage: damage/2
+            if target.group.Ground
+                set.damage: damage*2
+            if target.group.Rock
+                set.damage: damage*2
+            if target.group.Dragon
+                set.damage: damage/2
+        if attacker.group.Electric
+            if target.group.Water
+                set.damage: damage*2
+            if target.group.Electric
+                set.damage: damage/2
+            if target.group.Grass
+                set.damage: damage/2
+            if target.group.Ground
+                set.damage: 0
+                cancel
+            if target.group.Flying
+                set.damage: damage*2
+            if target.group.Dragon
+                set.damage: damage/2
+        if attacker.group.Grass
+            if target.group.Fire
+                set.damage: damage/2
+            if target.group.Water
+                set.damage: damage*2
+            if target.group.Grass
+                set.damage: damage/2
+            if target.group.Poison
+                set.damage: damage/2
+            if target.group.Ground
+                set.damage: damage*2
+            if target.group.Flying
+                set.damage: damage/2
+            if target.group.Bug
+                set.damage: damage/2
+            if target.group.Rock
+                set.damage: damage*2
+            if target.group.Dragon
+                set.damage: damage/2
+            if target.group.Steel
+                set.damage: damage*2
+        if attacker.group.Ice
+            if target.group.Fire
+                set.damage: damage/2
+            if target.group.Water
+                set.damage: damage/2
+            if target.group.Grass
+                set.damage: damage*2
+            if target.group.Ice
+                set.damage: damage/2
+            if target.group.Ground
+                set.damage: damage*2
+            if target.group.Flying
+                set.damage: damage*2
+            if target.group.Dragon
+                set.damage: damage*2
+            if target.group.Steel
+                set.damage: damage/2
+        if attacker.group.Fighting
+            if target.group.Normal
+                set.damage: damage*2
+            if target.group.Ice
+                set.damage: damage*2
+            if target.group.Poison
+                set.damage: damage/2
+            if target.group.Flying
+                set.damage: damage/2
+            if target.group.Psychic
+                set.damage: damage/2
+            if target.group.Bug
+                set.damage: damage/2
+            if target.group.Rock
+                set.damage: damage*2
+            if target.group.Ghost
+                set.damage: 0
+                cancel
+            if target.group.Dragon
+                set.damage: damage/2
+            if target.group.Steel
+                set.damage: damage*2
+            if target.group.Fairy
+                set.damage: damage/2
+        if attacker.group.Poison
+            if target.group.Grass
+                set.damage: damage*2
+            if target.group.Poison
+                set.damage: damage/2
+            if target.group.Ground
+                set.damage: damage/2
+            if target.group.Rock
+                set.damage: damage/2
+            if target.group.Ghost
+                set.damage: damage/2
+            if target.group.Steel
+                set.damage: 0
+                cancel
+            if target.group.Fairy
+                set.damage: damage*2
+        if attacker.group.Ground
+            if target.group.Fire
+                set.damage: damage*2
+            if target.group.Electric
+                set.damage: damage*2
+            if target.group.Grass
+                set.damage: damage/2
+            if target.group.Poison
+                set.damage: damage*2
+            if target.group.Flying
+                set.damage: 0
+                cancel
+            if target.group.Bug
+                set.damage: damage/2
+            if target.group.Rock
+                set.damage: damage*2
+            if target.group.Steel
+                set.damage: damage*2
+        if attacker.group.Flying
+            if target.group.Electric
+                set.damage: damage/2
+            if target.group.Grass
+                set.damage: damage*2
+            if target.group.Fighting
+                set.damage: damage*2
+            if target.group.Bug
+                set.damage: damage*2
+            if target.group.Rock
+                set.damage: damage/2
+            if target.group.Steel
+                set.damage: damage/2
+        if attacker.group.Psychic
+            if target.group.Fighting
+                set.damage: damage*2
+            if target.group.Poison
+                set.damage: damage*2
+            if target.group.Psychic
+                set.damage: damage/2
+            if target.group.Dark
+                set.damage: 0
+                cancel
+            if target.group.Steel
+                set.damage: damage/2
+        if attacker.group.Bug
+            if target.group.Fire
+                set.damage: damage/2
+            if target.group.Grass
+                set.damage: damage*2
+            if target.group.Fighting
+                set.damage: damage/2
+            if target.group.Poison
+                set.damage: damage/2
+            if target.group.Flying
+                set.damage: damage/2
+            if target.group.Psychic
+                set.damage: damage*2
+            if target.group.Ghost
+                set.damage: damage/2
+            if target.group.Dark
+                set.damage: damage*2
+            if target.group.Steel
+                set.damage: damage/2
+            if target.group.Fairy
+                set.damage: damage/2
+        if attacker.group.Rock
+            if target.group.Fire
+                set.damage: damage*2
+            if target.group.Ice
+                set.damage: damage*2
+            if target.group.Fighting
+                set.damage: damage/2
+            if target.group.Ground
+                set.damage: damage/2
+            if target.group.Flying
+                set.damage: damage*2
+            if target.group.Bug
+                set.damage: damage*2
+            if target.group.Steel
+                set.damage: damage/2
+        if attacker.group.Ghost
+            if target.group.Normal
+                set.damage: 0
+                cancel
+            if target.group.Psychic
+                set.damage: damage*2
+            if target.group.Ghost
+                set.damage: damage*2
+            if target.group.Dark
+                set.damage: damage/2
+        if attacker.group.Dragon
+            if target.group.Dragon
+                set.damage: damage*2
+            if target.group.Steel
+                set.damage: damage/2
+            if target.group.Fairy
+                set.damage: 0
+                cancel
+        if attacker.group.Dark
+            if target.group.Fighting
+                set.damage: damage/2
+            if target.group.Psychic
+                set.damage: damage*2
+            if target.group.Ghost
+                set.damage: damage*2
+            if target.group.Dark
+                set.damage: damage/2
+            if target.group.Fairy
+                set.damage: damage/2
+        if attacker.group.Steel
+            if target.group.Fire
+                set.damage: damage/2
+            if target.group.Water
+                set.damage: damage/2
+            if target.group.Electric
+                set.damage: damage/2
+            if target.group.Ice
+                set.damage: damage*2
+            if target.group.Rock
+                set.damage: damage*2
+            if target.group.Steel
+                set.damage: damage/2
+            if target.group.Fairy
+                set.damage: damage*2
+        if attacker.group.Fairy
+            if target.group.Fire
+                set.damage: damage/2
+            if target.group.Fighting
+                set.damage: damage*2
+            if target.group.Poison
+                set.damage: damage/2
+            if target.group.Dragon
+                set.damage: damage*2
+            if target.group.Dark
+                set.damage: damage*2
+            if target.group.Steel
+                set.damage: damage/2
+
+        if attacker.group.Psychic
+            #Psycho Cut
+            if chance.(attacker_tag_psychiclevel*2)/5
+                set.damage: damage*2
+                message.attacker
+                    "Your &5Psycho Cut&f was &oCritical!"
+                message.target
+                    "The enemy &5Psycho Cut&f was &oCritical!"
+        if attacker.group.Fire
+            if chance.50
+                target.playeffect.MOBSPAWNER_FLAMES
+            #Fire Punch
+            if chance.(attacker_tag_firelevel*2)/5
+                set.target_fireticks: target_fireticks+sqrt(attacker_tag_firelevel)*20
+                message.attacker
+                    "&4Fire Punch&f &oseared&f your opponent!"
+                message.target
+                    "You were &oseared&f by the &4Fire Punch&f!"
+        if attacker.group.Ghost
+            if chance.50
+                attacker.playsound.ENDERMAN_SCREAM.100.100
+            if chance.sqrt(attacker_tag_ghostlevel*2)/2
+                target.teleport.world_loc(target_x,target_y,target_z).(target_yaw).(-90)
+                message.attacker
+                    "%{target_name} &8Flinched&f from your Astonish attack!"
+                message.target
+                    "You &8Flinch&f from the Astonish attack!"
+        if attacker.group.Water
+            if chance.attacker_tag_waterlevel*1/5
+                target.addpotioneffect.slow.10,range(1,6)+(attacker_tag_waterlevel/20)
+                message.attacker
+                    "You used &bCrabHammer&f!"
+                message.target
+                    "%{attacker_name} used &bCrabHammer&f!"
+        if attacker.group.Normal
+            if (attacker_held_slot +1) == attacker_tag_cometpunch
+                delay.10
+                    targeteffect.unknownhurt: damage
+                    if chance.33
+                        delay.10
+                            targeteffect.unknownhurt: damage
+                            if chance.50
+                                delay.10
+                                    targeteffect.unknownhurt: damage
+                                    message.target
+                                        "Hit by %{attacker_name}'s Comet Punch 4 times!"
+                                    message.attacker
+                                        "Comet Punch hit 4 times!"
+                            elseif chance.50
+                                delay.10
+                                    targeteffect.unknownhurt: damage
+                                    delay.10
+                                        targeteffect.unknownhurt: damage
+                                        message.target
+                                            "Hit by %{attacker_name}'s Comet Punch 5 times!"
+                                        message.attacker
+                                            "Comet Punch hit 5 times!"
+                            else
+                                message.target
+                                    "Hit by %{attacker_name}'s Comet Punch 3 times!"
+                                message.attacker
+                                    "Comet Punch hit 3 times!"
+                    else
+                        message.target
+                            "Hit by %{attacker_name}'s Comet Punch 2 times!"
+                        message.attacker
+                            "Comet Punch hit 2 times!"
+    if target.is.player
+        #Dark
+        if target.group.Dark
+            if damage_type.is.VOID
+                set.damage: 0
+                if chance.10
+                    with "You shouldn't be here. GET OUT" as thestr
+                        set.$iOne: range(0,29)
+                        set.$iTwo: range($iOne,30)
+                        message.target
+                            '&7%{thestr_substring(0,$iOne)}&k%{thestr_substring($iOne,$iTwo)}&7%{thestr_substring($iTwo,30)}'
+        #Dragon
+        #Ice
+        #Psychic
+        #Electric
+        #Electric
+            #if damage_type.is.LIGHTNING
+            #    set.damage: 0
+        #Grass
+        if target.group.Grass
+            if damage_type.is.STARVATION
+                set.damage: 0
+            if damage_type.is.CONTACT
+                set.damage: 0
+            #Water
+        if target.group.Water
+            if damage_type.is.DROWNING
+                set.damage: 0
+        #Fire
+        if target.group.Fire
+            if damage_type.is.FIRE
+                set.damage: 0
+            if damage_type.is.LAVA
+                set.damage: 4-(target_tag_firelevel/25)
+        #Steel
+        if target.group.Steel
+            if damage_type.is.EXPLOSION
+                set.damage: 0
+            if damage_type.is.CONTACT
+                set.damage: 0
+        #Ghost
+        if target.group.Ghost
+            if damage_type.is.SUFFOCATION
+                set.damage: 0
+            if damage_type.is.CONTACT
+                set.damage: 0
+        #Bug
+        #Ground
+        if target.group.Ground
+            if damage_type.is.SUFFOCATION
+                set.damage: 0
+        #Poison
+        if target.group.Poison
+            if damage_type.is.POISON
+                if chance.target_tag_poisonlevel
+                    set.damage: 0
+        #Flying
+        if target.group.Flying
+            if damage_type.is.FALL
+                set.damage: 0
+        #Fighting
+        #Normal
+        #Fairy
+        #Defaulto
+        if target.group.Defaulto
+            set.damage: damage+200
+    if damage_type.is.BURN
+        if target.istagged.willburn
+            set.damage: damage+1
+            set.target_tag_willburn: target_tag_willburn-1
+            if target_tag_willburn = 0
+                untag.target.willburn
+    if attacker_tagvalue_confusioneffect > 0
+        if chance.40
+            attackereffect.unknownhurt: damage
+            cancel
+            message.attacker
+                "&cHurt yourself in your confusion!"
+        set.attacker_tag_confusioneffect: attacker_tag_confusioneffect-1
+        if attacker_tagvalue_confusioneffect = 0
+            untag.attacker.confusioneffect
+            message.attacker
+                "&oYou are confused no more!"
+    if projectile.is.snowball
+        cancel
+    if target.biome.sky
+        cancel
+    if target.isBREATHING.174
+        set.damage: damage+4
+on Death
+    if target.is.player
+        if !target.group.Defaulto
+            set.target_tag_deathX: target_x
+            set.target_tag_deathY: target_y
+            set.target_tag_deathZ: target_z
+            if target.istagged.destinybondeffect
+                set.attacker_health: 0.0
+                message.attacker
+                    "%{target_name} used &0Destiny Bond!&f You died!"
+                message.target
+                    "&0Destiny Bond&f killed the %{attacker_type}!"
+                untag.target.destinybondeffect
+        if damage_type != "STARVATION"
+            set.target_tag_foodlevel = target_foodlevel
+on Explode
+    cancel
+on Heal
+on HorseJump
+on ProjectileHit
+    #if !projectile.biome.sky
+        #if shooter.istagged.flameburstfired and !projectile.biome.sky
+            #if (((projectile_x-shooter_x)*(projectile_x-shooter_x))+((projectile_y-shooter_y)*(projectile_y-shooter_y))+((projectile_z-shooter_z)*(projectile_z-shooter_z))) < ((shooter_tag_firelevel*3/5)*(shooter_tag_firelevel*3/5))
+             #   if 1 <= shooter_tag_firelevel*3/4
+              #      for t from projectile_block_x-1 to projectile_block_x+1
+               #         for u from projectile_block_y-1 to projectile_block_y+1
+                #            for v from projectile_block_z-1 to projectile_block_z+1
+                 #               if world_block(t,u,v)_typeid = 0
+                  #                  set.world_block(t,u,v)_typeid: 51
+        untag.shooter.flameburstfired
+on ProjectileLaunch
+on ShootBow
+on Spawn
+    if entity.is.player
+        if entity.istagged.deathX
+            delay.10
+                set.$xvar: entity_tag_deathX+range(-25,25)
+                set.$yvar: entity_tag_deathY+range(-10,10)
+                set.$zvar: entity_tag_deathZ+range(-25,25)
+                if world_block($xvar,$yvar,$zvar)_typeid != 0
+                    while world_block($xvar,$yvar+1,$zvar)_typeid != 0
+                        set.$yvar: $yvar+1
+                else
+                    while world_block($xvar,$yvar-1,$zvar)_typeid == 0
+                        set.$yvar: $yvar-1
+                entity.teleport.world_loc($xvar,$yvar,$zvar).entity_pitch.entity_yaw
+                untag.entity.deathX
+                untag.entity.deathY
+                untag.entity.deathZ
+        set.entity_allowFlight: false
+        set.entity_isFlying: false
+        if entity_tag_foodlevel > 0
+            delay.1
+                set.entity_foodlevel = entity_tag_foodlevel
+                untag.entity.foodlevel
+on Tame
+on Target
+on Teleport
+
+
+
+
